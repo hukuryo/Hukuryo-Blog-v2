@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { client } from "@/lib/client";
+import { client } from "../lib/client";
 
 import { Header } from "../components/Header";
 import { PageTitle } from "../components/PageTitle";
@@ -10,7 +10,7 @@ import { SideBar } from "@/app/components/SideBar";
 import { Layout } from "@/app/components/Layout";
 import { PageTracking } from "@/app/components/PageTracking";
 
-import { ArticleProps } from "../../types/article";
+import { ArticleProps } from "../types/article";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
 
 export const getStaticProps = async () => {

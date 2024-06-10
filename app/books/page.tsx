@@ -1,5 +1,5 @@
 import { Header } from "../components/Header";
-import { client } from "@/lib/client";
+import { client } from "../lib/client";
 
 import { PageTitle } from "../components/PageTitle";
 import ArticleList from "../components/ArticleList";
@@ -8,10 +8,9 @@ import { ScrollUp } from "@/app/components/ScrollUp";
 import { Layout } from "@/app/components/Layout";
 import { PageTracking } from "@/app/components/PageTracking";
 import { SideBar } from "@/app/components/SideBar";
-import { ArticleProps } from "../../types/article";
+import { ArticleProps } from "../types/article";
 import Head from "next/head";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
-import { useRouter } from "next/router";
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "articles" });

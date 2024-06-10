@@ -1,24 +1,18 @@
-import { FC } from "react";
 import Head from "next/head";
+import { client } from "../../lib/client";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { client } from "@/lib/client";
+import { FC } from "react";
 
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import { SideBar } from "../components/SideBar";
-import { DetailBody } from "../components/articleDetail/DetailBody";
-
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
+import { SideBar } from "../../components/SideBar";
+import { PageTracking } from "@/app/components/PageTracking";
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { ArticlePageLayout } from "@/app/components/ArticlePageLayout";
+import { DetailBody } from "../../components/articleDetail/DetailBody";
 import { ScrollUp } from "@/app/components/ScrollUp";
-import { PageTracking } from "@/app/components/PageTracking";
 
 const BlogId: FC<BlogIdProps> = ({ blog }) => {
-  const createdDate = new Date(blog.publishedAt).toLocaleDateString("ja-JP", {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-  });
   return (
     <>
       <Head>
@@ -26,8 +20,8 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
       </Head>
       <Header />
       <PageTracking
-        pass={"hobbies"}
-        pageTitle={"趣味"}
+        pass={"tech"}
+        pageTitle={"技術記事"}
         articleTitle={blog.title}
         articlePass={blog.id}
       />
@@ -56,7 +50,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });
 
   const paths = data.contents.map(
-    (content: ArticleContent) => `/hobbies/${content.id}`
+    (content: ArticleContent) => `/tech/${content.id}`
   );
   return {
     paths,
