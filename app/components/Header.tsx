@@ -8,8 +8,6 @@ import {
   faGamepad,
   faBars,
   faLaptopCode,
-  faMoon,
-  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Link from "next/link";
@@ -17,15 +15,10 @@ import { useState } from "react";
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false);
-  // const [isDark, setIsDark] = useState(false);
 
   const handleMenuOpen = () => {
     setOpenMenu(!openMenu);
   };
-
-  // const handleDarkChange = () => {
-  //     setIsDark(!isDark);
-  // }
 
   return (
     <header>
@@ -60,26 +53,6 @@ export function Header() {
             趣味
           </Link>
         </div>
-        {/* <button 
-                        className={
-                            isDark ?
-                            "hidden"
-                            : "px-3 py-2 mr-4 rounded-lg bg-gray-800 text-white"
-                        } 
-                        onClick={handleDarkChange}
-                    >
-                        <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>
-                    </button>
-                    <button 
-                        className={
-                            isDark ?
-                            "pr-3 pl-2 py-2 mr-4 bg-white text-gray-800 rounded-lg"
-                            : "hidden"
-                        }
-                        onClick={handleDarkChange}
-                    >
-                        <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
-                    </button> */}
         <div className="lg:hidden">
           <div className="flex justify-between items-center h-full mt-6 mx-4">
             <Link href="/" className="font-bold text-2xl mt-0">

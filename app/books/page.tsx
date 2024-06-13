@@ -3,8 +3,6 @@ import { client } from "../lib/client";
 
 import { PageTitle } from "../components/PageTitle";
 import ArticleList from "../components/ArticleList";
-import { Footer } from "../components/Footer";
-import { ScrollUp } from "@/app/components/ScrollUp";
 import { Layout } from "@/app/components/Layout";
 import { PageTracking } from "@/app/components/PageTracking";
 import { SideBar } from "@/app/components/SideBar";
@@ -42,8 +40,6 @@ export default function books({ articles }: ArticleProps) {
         </div>
         <ResponsiveProfile />
       </Layout>
-      <ScrollUp />
-      <Footer />
     </>
   );
 }

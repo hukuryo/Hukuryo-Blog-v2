@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Header } from "../components/Header";
 import { SideBar } from "../components/SideBar";
 import { PageTitle } from "../components/PageTitle";
-import { Footer } from "../components/Footer";
-import { ScrollUp } from "@/app/components/ScrollUp";
 import { PageTracking } from "@/app/components/PageTracking";
 import Head from "next/head";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
@@ -89,8 +87,6 @@ export default function profile() {
         </div>
         <ResponsiveProfile />
       </main>
-      <ScrollUp />
-      <Footer />
     </>
   );
 }

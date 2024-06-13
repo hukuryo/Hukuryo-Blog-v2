@@ -38,14 +38,10 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <ScrollUp />
-            {/* <FooterForm /> */}
           </div>
         </div>
         <ResponsiveProfile />
       </main>
-      <ScrollUp />
-      <Footer />
     </>
   );
 }

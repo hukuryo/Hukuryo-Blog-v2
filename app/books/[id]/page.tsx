@@ -5,19 +5,12 @@ import Head from "next/head";
 
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { PageTracking } from "@/app/components/PageTracking";
 import { DetailBody } from "../../components/articleDetail/DetailBody";
 import { ArticlePageLayout } from "@/app/components/ArticlePageLayout";
-import { ScrollUp } from "@/app/components/ScrollUp";
 
 const BlogId: FC<BlogIdProps> = ({ blog }) => {
-  const createdDate = new Date(blog.publishedAt).toLocaleDateString("ja-JP", {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-  });
 
   return (
     <>
@@ -35,8 +28,6 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
         <SideBar />
         <DetailBody blog={blog} />
       </ArticlePageLayout>
-      <ScrollUp />
-      <Footer />
     </>
   );
 };

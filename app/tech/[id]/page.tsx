@@ -4,13 +4,11 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { FC } from "react";
 
 import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { PageTracking } from "@/app/components/PageTracking";
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { ArticlePageLayout } from "@/app/components/ArticlePageLayout";
 import { DetailBody } from "../../components/articleDetail/DetailBody";
-import { ScrollUp } from "@/app/components/ScrollUp";
 
 const BlogId: FC<BlogIdProps> = ({ blog }) => {
   return (
@@ -29,8 +27,6 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
         <SideBar />
         <DetailBody blog={blog} />
       </ArticlePageLayout>
-      <ScrollUp />
-      <Footer />
     </>
   );
 };

@@ -4,8 +4,6 @@ import { client } from "../lib/client";
 import { Header } from "../components/Header";
 import { PageTitle } from "../components/PageTitle";
 import ArticleList from "../components/ArticleList";
-import { Footer } from "../components/Footer";
-import { ScrollUp } from "@/app/components/ScrollUp";
 import { SideBar } from "@/app/components/SideBar";
 import { Layout } from "@/app/components/Layout";
 import { PageTracking } from "@/app/components/PageTracking";
@@ -43,8 +41,6 @@ export default function Article({ articles }: ArticleProps) {
         </div>
         <ResponsiveProfile />
       </Layout>
-      <ScrollUp />
-      <Footer />
     </>
   );
 }

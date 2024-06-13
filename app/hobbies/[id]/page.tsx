@@ -4,13 +4,11 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { client } from "../../lib/client";
 
 import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
 import { SideBar } from "../../components/SideBar";
 import { DetailBody } from "../../components/articleDetail/DetailBody";
 
 import { BlogIdProps, ArticleContent } from "../../types/article";
 import { ArticlePageLayout } from "@/app/components/ArticlePageLayout";
-import { ScrollUp } from "@/app/components/ScrollUp";
 import { PageTracking } from "@/app/components/PageTracking";
 
 const BlogId: FC<BlogIdProps> = ({ blog }) => {
@@ -35,8 +33,6 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
         <SideBar />
         <DetailBody blog={blog} />
       </ArticlePageLayout>
-      <ScrollUp />
-      <Footer />
     </>
   );
 };
