@@ -31,7 +31,6 @@ export default function Article({ articles }: ArticleProps) {
       <Head>
         <title>技術記事一覧</title>
       </Head>
-      <Header />
       <PageTracking pass={"tech"} pageTitle={"技術記事"} />
       <Layout>
         <PageTitle title={"技術記事"} />

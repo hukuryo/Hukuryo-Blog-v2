@@ -35,7 +35,6 @@ export default function Search({ articles }: ArticleProps) {
       <Head>
         <title>{`「${queryText}」の検索結果`}</title>
       </Head>
-      <Header />
       {queryText.length === 0 ? (
         <PageTracking pass={"tech"} pageTitle={`検索結果`} />
       ) : (

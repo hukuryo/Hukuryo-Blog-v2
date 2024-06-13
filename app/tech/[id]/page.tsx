@@ -16,7 +16,6 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
       <Head>
         <title>{blog.title}</title>
       </Head>
-      <Header />
       <PageTracking
         pass={"tech"}
         pageTitle={"技術記事"}

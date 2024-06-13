@@ -30,7 +30,6 @@ export default function books({ articles }: ArticleProps) {
       <Head>
         <title>読んだ本</title>
       </Head>
-      <Header />
       <PageTracking pass={"books"} pageTitle={"読んだ本"} />
       <Layout>
         <PageTitle title={"読んだ本"} />
