@@ -4,12 +4,21 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
-import { ArticleProps } from "../types/article";
+import { client } from "../lib/client";
 
-const ArticleList: React.FC<ArticleProps> = ({ articles, pass }) => {
+import { ArticleProps, ArticleContent } from "../types/article";
+
+const ArticleList: React.FC<ArticleProps> = async ({ pass }) => {
+
+  const articles = await client.get({
+    endpoint: 'articles',
+  })
+
+  const articlesByTypes: ArticleContent[] = articles.contents.filter((article: ArticleContent) => article.kinds[0] === pass);
+
   return (
     <ul className="mt-8 grid grid-cols-1 gap-6 w-full mr-5 md:grid-cols-2">
-      {articles.map((article) => (
+      {articlesByTypes.map((article: ArticleContent) => (
         <li key={article.id}>
           <Link href={`/${pass}/${article.id}`} legacyBehavior>
             <a>

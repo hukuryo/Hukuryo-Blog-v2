@@ -11,20 +11,8 @@ import { PageTracking } from "@/app/components/PageTracking";
 import { ArticleProps } from "../types/article";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
 
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "articles" });
 
-  return {
-    props: {
-      articles: data.contents,
-    },
-  };
-};
-
-export default function Article({ articles }: ArticleProps) {
-  const techArticles = articles.filter(
-    (article) => article.kinds[0] === "tech"
-  );
+export default function Article() {
 
   return (
     <>
@@ -35,7 +23,7 @@ export default function Article({ articles }: ArticleProps) {
       <Layout>
         <PageTitle title={"技術記事"} />
         <div className="md:flex justify-between">
-          <ArticleList articles={techArticles} pass={"tech"} />
+          <ArticleList pass={"tech"} />
           <SideBar />
         </div>
         <ResponsiveProfile />
