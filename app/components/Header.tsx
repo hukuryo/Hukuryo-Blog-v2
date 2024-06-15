@@ -46,7 +46,7 @@ export function Header() {
             読んだ本
           </Link>
           <Link
-            href="/hobbies"
+            href="/hobby"
             className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"
           >
             <FontAwesomeIcon icon={faGamepad} size="sm" className="mr-1" />
@@ -121,7 +121,7 @@ export function Header() {
               読んだ本
             </Link>
             <Link
-              href="/hobbies"
+              href="/hobby"
               className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300"
             >
               <FontAwesomeIcon icon={faGamepad} className="mr-2" />

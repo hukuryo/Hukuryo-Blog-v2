@@ -97,7 +97,7 @@ export function Footer() {
               <li className="mb-3">
                 <Link
                   className="text-md hover:opacity-60 hover:underline"
-                  href="/hobbies"
+                  href="/hobby"
                 >
                   趣味
                 </Link>
