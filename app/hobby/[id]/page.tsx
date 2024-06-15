@@ -23,7 +23,7 @@ const BlogId: FC<BlogIdProps> = ({ blog }) => {
         <title>{blog.title}</title>
       </Head>
       <PageTracking
-        pass={"hobbies"}
+        pass={"hobby"}
         pageTitle={"趣味"}
         articleTitle={blog.title}
         articlePass={blog.id}
@@ -51,7 +51,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const data = await client.get({ endpoint: "articles" });
 
   const paths = data.contents.map(
-    (content: ArticleContent) => `/hobbies/${content.id}`
+    (content: ArticleContent) => `/hobby/${content.id}`
   );
   return {
     paths,
