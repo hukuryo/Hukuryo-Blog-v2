@@ -1,14 +1,10 @@
 import Head from "next/head";
-import { client } from "../lib/client";
-
-import { Header } from "../components/Header";
 import { PageTitle } from "../components/PageTitle";
 import ArticleList from "../components/ArticleList";
 import { SideBar } from "@/app/components/SideBar";
 import { Layout } from "@/app/components/Layout";
 import { PageTracking } from "@/app/components/PageTracking";
 
-import { ArticleProps } from "../types/article";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
 
 

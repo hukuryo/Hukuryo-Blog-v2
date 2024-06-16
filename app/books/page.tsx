@@ -1,9 +1,9 @@
+import Head from "next/head";
 import { PageTitle } from "../components/PageTitle";
 import ArticleList from "../components/ArticleList";
 import { Layout } from "@/app/components/Layout";
 import { PageTracking } from "@/app/components/PageTracking";
 import { SideBar } from "@/app/components/SideBar";
-import Head from "next/head";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
 
 
