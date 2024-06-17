@@ -1,20 +1,21 @@
 "use client";
 
 import Link from "next/link";
-
-import { Header } from "../components/Header";
 import { SideBar } from "../components/SideBar";
 import { PageTitle } from "../components/PageTitle";
 import { PageTracking } from "@/app/components/PageTracking";
-import Head from "next/head";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "プロフィール",
+  description: "プロフィール",
+};
 
 export default function profile() {
   return (
     <>
-      <Head>
-        <title>プロフィール紹介</title>
-      </Head>
       <PageTracking pass={"profile"} pageTitle={"プロフィール紹介"} />
       <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
         <div className="flex flex-row-reverse">

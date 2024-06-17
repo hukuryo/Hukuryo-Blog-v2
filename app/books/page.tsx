@@ -5,14 +5,17 @@ import { Layout } from "@/app/components/Layout";
 import { PageTracking } from "@/app/components/PageTracking";
 import { SideBar } from "@/app/components/SideBar";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+  title: "読んだ本",
+  description: "読んだ本",
+};
 
 export default async function page() {
   return (
     <>
-      <Head>
-        <title>読んだ本</title>
-      </Head>
       <PageTracking pass={"books"} pageTitle={"読んだ本"} />
       <Layout>
         <PageTitle title={"読んだ本"} />

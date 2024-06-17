@@ -1,18 +1,16 @@
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
 import { PageTitle } from "./components/PageTitle";
-import { ScrollUp } from "@/app/components/ScrollUp";
-
 import { SideBar } from "@/app/components/SideBar";
-import Head from "next/head";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "トップページ",
+  description: "トップページ",
+};
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>トップページ</title>
-      </Head>
 
       <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
         <div className="flex flex-row-reverse">

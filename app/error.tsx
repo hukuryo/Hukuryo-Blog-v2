@@ -1,6 +1,12 @@
 "use client"
 
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "エラーが発生しました。",
+  description: "エラーが発生しました。",
+};
 
 export default function ErrorPage500() {
   return (
