@@ -1,40 +1,33 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import { client } from "../lib/client";
 
-import { Header } from "../components/Header";
 import { PageTitle } from "../components/PageTitle";
 import ArticleList from "../components/ArticleList";
 import { SideBar } from "@/app/components/SideBar";
 import { Layout } from "@/app/components/Layout";
 import { PageTracking } from "@/app/components/PageTracking";
-import { ArticleProps } from "../types/article";
 import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
+import { ArticleContent } from "../types/article";
+import { Metadata } from "next";
 
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "articles" });
 
-  return {
-    props: {
-      articles: data.contents,
-    },
-  };
+export const metadata: Metadata = {
+  title: "記事を検索",
+  description: "記事を検索"
 };
 
-export default function Search({ articles }: ArticleProps) {
+export default async function Page() {
   const router = useRouter();
   const { s } = router.query;
+  const articles = await client.get({ endpoint: "articles" });
   const queryText: string = Array.isArray(s) ? s[0] : s || "";
 
-  const searchArticles = articles.filter((article) =>
+  const searchArticles = articles.filter((article: ArticleContent) =>
     article.title.includes(queryText)
   );
 
   return (
     <>
-      <Head>
-        <title>{`「${queryText}」の検索結果`}</title>
-      </Head>
       {queryText.length === 0 ? (
         <PageTracking pass={"tech"} pageTitle={`検索結果`} />
       ) : (
@@ -52,7 +45,7 @@ export default function Search({ articles }: ArticleProps) {
           </>
         )}
         <div className="md:flex justify-between">
-          <ArticleList articles={searchArticles} pass={"tech"} />
+          <ArticleList pass={"tech"} />
           <SideBar />
         </div>
         <ResponsiveProfile />
