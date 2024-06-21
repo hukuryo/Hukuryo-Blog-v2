@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-
       <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
         <div className="flex flex-row-reverse">
           <SideBar />
