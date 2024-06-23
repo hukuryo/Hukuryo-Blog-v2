@@ -3,7 +3,7 @@ export function FooterForm() {
     <div className="mt-32 w-full">
       <p className="font-bold mb-7 border-b-8">お問い合わせはこちらから</p>
       <div className="max-w-[100%] mx-auto">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-5">
+        <form className=" shadow-md rounded px-8 pt-6 pb-8 mb-5">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               お名前

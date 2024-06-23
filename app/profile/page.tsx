@@ -20,7 +20,7 @@ export default function profile() {
       <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
         <div className="flex flex-row-reverse">
           <SideBar />
-          <div className="w-full bg-white px-10 py-5 pb-10 shadow-lg rounded-md">
+          <div className="w-full px-10 py-5 pb-10 shadow-lg rounded-md">
             <PageTitle title={"プロフィール紹介"} />
             <p className="mt-16">
               このページでは筆者の経歴などについて紹介します。

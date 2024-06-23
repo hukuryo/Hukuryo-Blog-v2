@@ -16,7 +16,7 @@ export const Recommendation: React.FC<ArticleProps> = ({ articles, pass }) => {
         {articles.map((article) => (
           <ul
             key={article.id}
-            className="bg-white rounded-md shadow-md hover:shadow-lg"
+            className="rounded-md shadow-md hover:shadow-lg"
           >
             <li className="px-4 pb-2">
               <Link href={`/${pass}/${article.id}`} legacyBehavior>

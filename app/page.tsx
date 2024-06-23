@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
+      <main className="pt-10 sm:px-20 pb-4 px-5">
         <div className="flex flex-row-reverse">
           <SideBar />
-          <div className="w-full bg-white px-10 py-5 pb-10 shadow-lg rounded-md">
+          <div className="w-full px-10 py-5 pb-10 shadow-lg rounded-md">
             <PageTitle title={"トップページ"} />
             <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>
             <p className="mt-8">
@@ -25,7 +25,7 @@ export default function Home() {
               このブログは以下の技術スタックで作られています。
             </p>
             <div className="mt-10">
-              <div className="border max-w-md border-slate-300 rounded-md shadow-md sm:w-4/5 px-5 pt-8 pb-6 mb-10 bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+              <div className="border max-w-md border-slate-300 rounded-md shadow-md sm:w-4/5 px-5 pt-8 pb-6 mb-10 text-gray-800 dark:text-white">
                 <p className="text-2xl font-semibold mb-7">技術スタック</p>
                 <ul className="list-disc pl-5">
                   <li className="mb-3">Next.js</li>
