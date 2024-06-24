@@ -23,36 +23,39 @@ export function Header() {
 
   return (
     <header>
-      <div className="h-24 text-center hidden lg:flex">
-        <h3 className="font-bold text-3xl flex border-none justify-center items-center w-full">
-          <Link href="/" className="hover:opacity-70">
-            Hukuryo-no-Blog
-          </Link>
-        </h3>
-      </div>
       <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
-        <div className="items-center justify-center hidden lg:flex w-full">
-          <Link
-            href="/tech"
-            className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"
-          >
-            <FontAwesomeIcon icon={faLaptopCode} size="sm" className="mr-1" />
-            技術記事
-          </Link>
-          <Link
-            href="/books"
-            className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"
-          >
-            <FontAwesomeIcon icon={faBookOpen} size="sm" className="mr-1" />
-            読んだ本
-          </Link>
-          <Link
-            href="/hobby"
-            className="text-md px-5 ease-in-out duration-300 hover:border-black hover:border-b-2"
-          >
-            <FontAwesomeIcon icon={faGamepad} size="sm" className="mr-1" />
-            趣味
-          </Link>
+        <div className="items-center justify-between hidden lg:flex w-full mx-5">
+          <div>
+            <h3 className="font-bold text-3xl">
+              <Link href="/" className="hover:opacity-70">
+                Hukuryo-no-Blog
+              </Link>
+            </h3>
+          </div>
+          <div>
+            <Link
+              href="/tech"
+              className="text-md px-3 ease-in-out duration-300 hover:opacity-70"
+            >
+              <FontAwesomeIcon icon={faLaptopCode} size="sm" className="mr-1" />
+              技術記事
+            </Link>
+            <Link
+              href="/books"
+              className="text-md px-3 ease-in-out duration-300 hover:opacity-70"
+            >
+              <FontAwesomeIcon icon={faBookOpen} size="sm" className="mr-1" />
+              読んだ本
+            </Link>
+            <Link
+              href="/hobby"
+              className="text-md px-3 ease-in-out duration-300 hover:opacity-70"
+            >
+              <FontAwesomeIcon icon={faGamepad} size="sm" className="mr-1" />
+              趣味
+            </Link>
+            <ModeToggle />
+          </div>
         </div>
         <div className="lg:hidden">
           <div className="flex justify-between items-center h-full mt-6 mx-4">

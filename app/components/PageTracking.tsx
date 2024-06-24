@@ -13,7 +13,7 @@ export function PageTracking(props: Tracking) {
   const { pass, pageTitle, articleTitle, articlePass } = props;
 
   return (
-    <div className="py-3 pl-3 bg-gray-200">
+    <div className="py-3 pl-3 bg-gray-200 dark:bg-slate-900">
       <Link href="/" legacyBehavior>
         <a className="mr-3 text-sm hover:underline">
           <FontAwesomeIcon size="sm" icon={faHome} className="mr-1" />
