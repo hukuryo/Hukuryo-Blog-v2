@@ -12,6 +12,7 @@ import {
 
 import Link from "next/link";
 import { useState } from "react";
+import { ModeToggle } from "./toggle";
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -22,14 +23,14 @@ export function Header() {
 
   return (
     <header>
-      <div className="h-24 text-center hidden bg-white lg:flex">
+      <div className="h-24 text-center hidden lg:flex">
         <h3 className="font-bold text-3xl flex border-none justify-center items-center w-full">
           <Link href="/" className="hover:opacity-70">
             Hukuryo-no-Blog
           </Link>
         </h3>
       </div>
-      <div className="shadow-lg lg:flex bg-white lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
+      <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
         <div className="items-center justify-center hidden lg:flex w-full">
           <Link
             href="/tech"
@@ -60,34 +61,38 @@ export function Header() {
                 Hukuryo-no-Blog
               </h1>
             </Link>
-            <button
-              onClick={handleMenuOpen}
-              type="button"
-              className="z-20 lg:hidden space-y-2"
-            >
-              <div
-                className={
-                  openMenu
-                    ? "w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
-                    : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
-                }
-              />
-              <div
-                className={
-                  openMenu
-                    ? "opacity-0 transition duration-500 ease-in-out"
-                    : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
-                }
-              />
-              <div
-                className={
-                  openMenu
-                    ? "w-8 h-0.5 bg-gray-600 -rotate-45 transition duration-500 ease-in-out"
-                    : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
-                }
-              />
-            </button>
+            <div>
+              <ModeToggle />
+              <button
+                onClick={handleMenuOpen}
+                type="button"
+                className="z-20 lg:hidden space-y-2 ml-5"
+              >
+                <div
+                  className={
+                    openMenu
+                      ? "w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
+                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                  }
+                />
+                <div
+                  className={
+                    openMenu
+                      ? "opacity-0 transition duration-500 ease-in-out"
+                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                  }
+                />
+                <div
+                  className={
+                    openMenu
+                      ? "w-8 h-0.5 bg-gray-600 -rotate-45 transition duration-500 ease-in-out"
+                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                  }
+                />
+              </button>
+            </div>
           </div>
+          
           <nav
             className={
               openMenu
@@ -95,6 +100,33 @@ export function Header() {
                 : "fixed right-[-250%] ease-linear duration-300"
             }
           >
+            <button
+                onClick={handleMenuOpen}
+                type="button"
+                className="z-20 lg:hidden space-y-2 ml-5"
+              >
+                <div
+                  className={
+                    openMenu
+                      ? "w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
+                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                  }
+                />
+                <div
+                  className={
+                    openMenu
+                      ? "opacity-0 transition duration-500 ease-in-out"
+                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                  }
+                />
+                <div
+                  className={
+                    openMenu
+                      ? "w-8 h-0.5 bg-gray-600 -rotate-45 transition duration-500 ease-in-out"
+                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                  }
+                />
+              </button>
             <h5 className="mt-14 pl-3 bg-gray-500 text-white py-2.5">
               <FontAwesomeIcon icon={faBars} className="mr-2" />
               MENU
