@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 
 export default function CustomErrorPage() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
+    <div className="flex items-center justify-center h-screen">
       <div className="text-center">
         <h1 className="text-4xl font-semibold text-red-600">Oops!</h1>
-        <p className="mt-2 text-lg text-gray-800">エラーが発生しました。</p>
-        <p className="mt-2 mb-10 text-gray-600">
+        <p className="mt-2 text-lg">エラーが発生しました。</p>
+        <p className="mt-2 mb-10">
           申し訳ありませんが、リクエストされたページが見つかりませんでした。
         </p>
         <Link href="/" legacyBehavior>
