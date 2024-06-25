@@ -1,13 +1,13 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faAngleRight,
   faFolder,
   faHome,
-} from "@fortawesome/free-solid-svg-icons";
-import { Tracking } from "../types/pageTracking";
+} from '@fortawesome/free-solid-svg-icons';
+import { Tracking } from '../types/pageTracking';
 
 export function PageTracking(props: Tracking) {
   const { pass, pageTitle, articleTitle, articlePass } = props;

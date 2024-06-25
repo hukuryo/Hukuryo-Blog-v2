@@ -1,22 +1,22 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { GitHubLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import { GitHubLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 
 export function Profile() {
   return (
-    <div className="bg-white text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full">
+    <div className="text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full">
       <div className="text-center flex justify-center mb-3">
         <Image
           src="/profile.png"
           alt="Profile Logo"
-          className="dark:invert my-1 rounded-full"
+          className="my-1 rounded-full bg-white"
           width={80}
           height={100}
         />
       </div>
       <h3 className="text-center mt-4 mb-7">Hukuryo</h3>
-      <p className="mb-3 text-xs dark:text-blue-400">
+      <p className="mb-3 text-xs">
         2022/11~エンジニアになりました。
         <br />
         普段はフロント中心に勉強も頑張っています。

@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 export function SearchInput() {
-  const [inputValue, setInputText] = useState("");
+  const [inputValue, setInputText] = useState('');
 
   const inputText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
   faUser,
@@ -8,11 +8,11 @@ import {
   faGamepad,
   faBars,
   faLaptopCode,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
-import Link from "next/link";
-import { useState } from "react";
-import { ModeToggle } from "./toggle";
+import Link from 'next/link';
+import { useState } from 'react';
+import { ModeToggle } from './toggle';
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -74,62 +74,62 @@ export function Header() {
                 <div
                   className={
                     openMenu
-                      ? "w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
-                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                      ? 'w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 transition duration-500 ease-in-out'
+                      : 'w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out'
                   }
                 />
                 <div
                   className={
                     openMenu
-                      ? "opacity-0 transition duration-500 ease-in-out"
-                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                      ? 'opacity-0 transition duration-500 ease-in-out'
+                      : 'w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out'
                   }
                 />
                 <div
                   className={
                     openMenu
-                      ? "w-8 h-0.5 bg-gray-600 -rotate-45 transition duration-500 ease-in-out"
-                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
+                      ? 'w-8 h-0.5 bg-gray-600 -rotate-45 transition duration-500 ease-in-out'
+                      : 'w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out'
                   }
                 />
               </button>
             </div>
           </div>
-          
+
           <nav
             className={
               openMenu
-                ? "text-left fixed z-10 bg-slate-50 right-0 top-0 sm:w-2/5 w-3/5 h-screen flex flex-col justify-start pt-8 px-3 ease-linear duration-300"
-                : "fixed right-[-250%] ease-linear duration-300"
+                ? 'text-left fixed z-10 bg-slate-50 right-0 top-0 sm:w-2/5 w-3/5 h-screen flex flex-col justify-start pt-8 px-3 ease-linear duration-300'
+                : 'fixed right-[-250%] ease-linear duration-300'
             }
           >
             <button
-                onClick={handleMenuOpen}
-                type="button"
-                className="z-20 lg:hidden space-y-2 ml-5"
-              >
-                <div
-                  className={
-                    openMenu
-                      ? "w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
-                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
-                  }
-                />
-                <div
-                  className={
-                    openMenu
-                      ? "opacity-0 transition duration-500 ease-in-out"
-                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
-                  }
-                />
-                <div
-                  className={
-                    openMenu
-                      ? "w-8 h-0.5 bg-gray-600 -rotate-45 transition duration-500 ease-in-out"
-                      : "w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out"
-                  }
-                />
-              </button>
+              onClick={handleMenuOpen}
+              type="button"
+              className="z-20 lg:hidden space-y-2 ml-5"
+            >
+              <div
+                className={
+                  openMenu
+                    ? 'w-8 h-0.5 bg-gray-600 translate-y-2.5 rotate-45 transition duration-500 ease-in-out'
+                    : 'w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out'
+                }
+              />
+              <div
+                className={
+                  openMenu
+                    ? 'opacity-0 transition duration-500 ease-in-out'
+                    : 'w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out'
+                }
+              />
+              <div
+                className={
+                  openMenu
+                    ? 'w-8 h-0.5 bg-gray-600 -rotate-45 transition duration-500 ease-in-out'
+                    : 'w-8 h-0.5 bg-gray-600 transition duration-500 ease-in-out'
+                }
+              />
+            </button>
             <h5 className="mt-14 pl-3 bg-gray-500 text-white py-2.5">
               <FontAwesomeIcon icon={faBars} className="mr-2" />
               MENU

@@ -1,11 +1,11 @@
-import { PageTitle } from "./components/PageTitle";
-import { SideBar } from "@/app/components/SideBar";
-import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
-import { Metadata } from "next";
+import { PageTitle } from './components/PageTitle';
+import { SideBar } from '@/app/components/SideBar';
+import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "トップページ",
-  description: "トップページ",
+  title: 'トップページ',
+  description: 'トップページ',
 };
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         <div className="flex flex-row-reverse">
           <SideBar />
           <div className="w-full px-10 py-5 pb-10 shadow-lg rounded-md">
-            <PageTitle title={"トップページ"} />
+            <PageTitle title={'トップページ'} />
             <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>
             <p className="mt-8">
               このブログでは、プログラミングについての記事を中心とした記事を書いています。

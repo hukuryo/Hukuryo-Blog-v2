@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Footer } from "./components/Footer";
-import { ScrollUp } from "./components/ScrollUp";
-import { Header } from "./components/Header";
-import { ThemeProvider } from "./components/ui/theme-provider";
+import type { Metadata } from 'next';
+import './globals.css';
+import { Footer } from './components/Footer';
+import { ScrollUp } from './components/ScrollUp';
+import { Header } from './components/Header';
+import { ThemeProvider } from './components/ui/theme-provider';
 
 export const metadata: Metadata = {
-  title: "Hukuryo-no-Blog",
-  description: "Hukuryo-no-Blog",
+  title: 'Hukuryo-no-Blog',
+  description: 'Hukuryo-no-Blog',
 };
 
 export default function RootLayout({
@@ -19,15 +19,15 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-        <Header />
-        {children}
-        <ScrollUp />
-        <Footer />
+          <Header />
+          {children}
+          <ScrollUp />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

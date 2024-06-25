@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-import { animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from 'react-scroll';
 
 export function ScrollUp() {
   // スクロールアップボタンを表示、非表示させるためのState
@@ -19,10 +19,10 @@ export function ScrollUp() {
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility);
 
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener('scroll', toggleVisibility);
     };
   }, []);
 
@@ -34,7 +34,7 @@ export function ScrollUp() {
     <div className="fixed bottom-6 right-6 z-50">
       <button
         className={`fixed bottom-6 right-6 z-50 bg-gray-500 text-white px-4 py-3 rounded-full duration-200 hover:opacity-60 cursor-pointer transition-opacity ${
-          isVisible ? "opacity-100" : "opacity-0"
+          isVisible ? 'opacity-100' : 'opacity-0'
         }`}
         onClick={scrollToTop}
       >

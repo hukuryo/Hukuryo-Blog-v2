@@ -1,5 +1,5 @@
-import { SearchInput } from "@/app/components/SearchInput";
-import { Profile } from "@/app/components/Profile";
+import { SearchInput } from '@/app/components/SearchInput';
+import { Profile } from '@/app/components/Profile';
 
 export const SideBar = () => {
   return (

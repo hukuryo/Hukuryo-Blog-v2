@@ -1,9 +1,9 @@
-import { Metadata } from "next";
-import Link from "next/link";
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "ページが見つかりませんでした。",
-  description: "ページが見つかりませんでした。",
+  title: 'ページが見つかりませんでした。',
+  description: 'ページが見つかりませんでした。',
 };
 
 export default function CustomErrorPage() {

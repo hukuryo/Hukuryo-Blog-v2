@@ -1,27 +1,24 @@
-"use client";
-
-import Link from "next/link";
-import { SideBar } from "../components/SideBar";
-import { PageTitle } from "../components/PageTitle";
-import { PageTracking } from "@/app/components/PageTracking";
-import { ResponsiveProfile } from "@/app/components/ResponsiveProfile";
-import { Metadata } from "next";
-
+import Link from 'next/link';
+import { SideBar } from '../components/SideBar';
+import { PageTitle } from '../components/PageTitle';
+import { PageTracking } from '@/app/components/PageTracking';
+import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "プロフィール",
-  description: "プロフィール",
+  title: 'プロフィール',
+  description: 'プロフィール',
 };
 
 export default function profile() {
   return (
     <>
-      <PageTracking pass={"profile"} pageTitle={"プロフィール紹介"} />
-      <main className="pt-10 sm:px-20 pb-48 bg-indigo-100 px-5">
+      <PageTracking pass={'profile'} pageTitle={'プロフィール紹介'} />
+      <main className="pt-10 sm:px-20 pb-48 px-5">
         <div className="flex flex-row-reverse">
           <SideBar />
           <div className="w-full px-10 py-5 pb-10 shadow-lg rounded-md">
-            <PageTitle title={"プロフィール紹介"} />
+            <PageTitle title={'プロフィール紹介'} />
             <p className="mt-16">
               このページでは筆者の経歴などについて紹介します。
             </p>
@@ -43,10 +40,10 @@ export default function profile() {
               <p className="mb-12">
                 趣味はスポーツ観戦、映画鑑賞、漫画を読むこと
               </p>
-              <PageTitle title={"アウトプット"} />
+              <PageTitle title={'アウトプット'} />
               <ul>
                 <li className="mb-3">
-                  ・{" "}
+                  ・{' '}
                   <Link
                     className="text-lg text-blue-500 hover:underline"
                     href="https://qiita.com/hukuryo"
@@ -55,7 +52,7 @@ export default function profile() {
                   </Link>
                 </li>
                 <li className="mb-3">
-                  ・{" "}
+                  ・{' '}
                   <Link
                     className="text-lg text-blue-500 hover:underline"
                     href="https://zenn.dev/ryohei0509"
@@ -64,7 +61,7 @@ export default function profile() {
                   </Link>
                 </li>
                 <li className="mb-3">
-                  ・{" "}
+                  ・{' '}
                   <Link
                     className="text-lg text-blue-500 hover:underline"
                     href="https://github.com/hukuryo"
@@ -73,7 +70,7 @@ export default function profile() {
                   </Link>
                 </li>
                 <li>
-                  ・{" "}
+                  ・{' '}
                   <Link
                     className="text-lg text-blue-500 hover:underline"
                     href="https://twitter.com/hukuryo_"

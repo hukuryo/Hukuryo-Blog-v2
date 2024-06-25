@@ -1,10 +1,10 @@
-import React from "react";
-import { faClipboard, faClock } from "@fortawesome/free-solid-svg-icons";
-import { DetailImage } from "./DetailImage";
-import { DetailCategory } from "./DetailCategory";
-import { DetailTitle } from "./DetailTitle";
-import { BlogIdProps } from "../../types/article";
-import { useArrangeDate } from "../../hooks/useArrangeDay";
+import React from 'react';
+import { faClipboard, faClock } from '@fortawesome/free-solid-svg-icons';
+import { DetailImage } from './DetailImage';
+import { DetailCategory } from './DetailCategory';
+import { DetailTitle } from './DetailTitle';
+import { BlogIdProps } from '../../types/article';
+import { useArrangeDate } from '../../hooks/useArrangeDay';
 
 export function DetailBody(props: BlogIdProps) {
   const { blog } = props;
@@ -12,7 +12,7 @@ export function DetailBody(props: BlogIdProps) {
   const createdDate = useArrangeDate(blog.publishedAt);
 
   return (
-    <div className="mb-10 p-7 mx-auto w-10/12 lg:w-9/12 shadow-lg bg-white rounded-md">
+    <div className="mb-10 p-7 mx-auto w-10/12 lg:w-9/12 shadow-lg rounded-md">
       <DetailTitle title={blog.title} icon={faClipboard} />
       <DetailCategory
         category={blog.category}
