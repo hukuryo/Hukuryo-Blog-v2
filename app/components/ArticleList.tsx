@@ -1,28 +1,26 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import React, { FC } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
-import { client } from "../lib/client";
+import { ArticleProps, ArticleContent } from '../types/article';
+import { headers } from 'next/headers';
 
-import { ArticleProps, ArticleContent } from "../types/article";
-
-const ArticleList: React.FC<ArticleProps> = async ({ pass }) => {
-
-  const articles = await client.get({
-    endpoint: 'articles',
-  })
-
-  const articlesByTypes: ArticleContent[] = articles.contents.filter((article: ArticleContent) => article.kinds[0] === pass);
+const ArticleList: FC<ArticleProps> = async ({ pass }) => {
+  const headersList = headers();
+  const host = headersList.get('x-forwarded-host');
+  const protocol = headersList.get('x-forwarded-proto')
+  const response = await fetch(`${protocol}://${host}/api/article/${pass}`);
+  const articles = await response.json();
 
   return (
     <ul className="mt-8 grid grid-cols-1 gap-6 w-full mr-5 md:grid-cols-2">
-      {articlesByTypes.map((article: ArticleContent) => (
+      {articles.map((article: ArticleContent) => (
         <li key={article.id}>
           <Link href={`/${pass}/${article.id}`} legacyBehavior>
             <a>
-              <article className="shadow-lg bg-white rounded-lg transition-transform transform hover:scale-105 hover:opacity-80">
+              <article className="shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:opacity-80">
                 <div className="h-auto">
                   <Image
                     src={article.imageUrl.url}
@@ -38,10 +36,10 @@ const ArticleList: React.FC<ArticleProps> = async ({ pass }) => {
                   </span>
                   <FontAwesomeIcon icon={faClock} className="h-3 mr-1" />
                   <small>
-                    {new Date(article.publishedAt).toLocaleDateString("ja-JP", {
-                      year: "numeric",
-                      month: "numeric",
-                      day: "numeric",
+                    {new Date(article.publishedAt).toLocaleDateString('ja-JP', {
+                      year: 'numeric',
+                      month: 'numeric',
+                      day: 'numeric',
                     })}
                   </small>
                   <h4 className="font-bold pt-2 text-slate-900 transition-colors group-hover:text-primary-500">
