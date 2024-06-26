@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { FaChevronUp } from "react-icons/fa";
 
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -33,12 +32,12 @@ export function ScrollUp() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <button
-        className={`fixed bottom-6 right-6 z-50 bg-gray-500 text-white px-4 py-3 rounded-full duration-200 hover:opacity-60 cursor-pointer transition-opacity ${
+        className={`fixed bottom-6 right-6 z-50 bg-gray-500 text-white px-5 py-5 rounded-full duration-200 hover:opacity-60 cursor-pointer transition-opacity ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
         onClick={scrollToTop}
       >
-        <FontAwesomeIcon icon={faChevronUp} />
+        <FaChevronUp/>
       </button>
     </div>
   );

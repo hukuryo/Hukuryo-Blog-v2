@@ -1,5 +1,4 @@
 import React from 'react';
-import { faClipboard, faClock } from '@fortawesome/free-solid-svg-icons';
 import { DetailImage } from './DetailImage';
 import { DetailCategory } from './DetailCategory';
 import { DetailTitle } from './DetailTitle';
@@ -13,10 +12,9 @@ export function DetailBody(props: BlogIdProps) {
 
   return (
     <div className="mb-10 p-7 mx-auto w-10/12 lg:w-9/12 shadow-lg rounded-md">
-      <DetailTitle title={blog.title} icon={faClipboard} />
+      <DetailTitle title={blog.title} />
       <DetailCategory
         category={blog.category}
-        icon={faClock}
         createdDate={createdDate}
       />
       <DetailImage imageUrl={blog.imageUrl.url} />

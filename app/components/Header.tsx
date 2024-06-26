@@ -1,14 +1,6 @@
 'use client';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHome,
-  faUser,
-  faBookOpen,
-  faGamepad,
-  faBars,
-  faLaptopCode,
-} from '@fortawesome/free-solid-svg-icons';
+import { FaHome, FaBook, FaUser, FaLaptopCode, FaGamepad } from "react-icons/fa";
 
 import Link from 'next/link';
 import { useState } from 'react';
@@ -25,37 +17,37 @@ export function Header() {
     <header>
       <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
         <div className="items-center justify-between hidden lg:flex w-full mx-5">
-          <div>
-            <h3 className="font-bold text-3xl">
+          <div className='flex items-center'>
+            <h4 className="font-bold text-2xl mb-1">
               <Link href="/" className="hover:opacity-70">
                 Hukuryo-no-Blog
               </Link>
-            </h3>
+            </h4>
+            <div className='ml-5'>
+              <Link
+                href="/tech"
+                className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
+              >
+                <FaLaptopCode className='inline mr-1 mb-1'/>
+                技術記事
+              </Link>
+              <Link
+                href="/books"
+                className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
+              >
+                <FaBook className='inline mr-1 mb-1'/>
+                読んだ本
+              </Link>
+              <Link
+                href="/hobby"
+                className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
+              >
+                <FaGamepad className='inline mr-1 mb-1'/>
+                趣味
+              </Link>
+            </div>
           </div>
-          <div>
-            <Link
-              href="/tech"
-              className="text-md px-3 ease-in-out duration-300 hover:opacity-70"
-            >
-              <FontAwesomeIcon icon={faLaptopCode} size="sm" className="mr-1" />
-              技術記事
-            </Link>
-            <Link
-              href="/books"
-              className="text-md px-3 ease-in-out duration-300 hover:opacity-70"
-            >
-              <FontAwesomeIcon icon={faBookOpen} size="sm" className="mr-1" />
-              読んだ本
-            </Link>
-            <Link
-              href="/hobby"
-              className="text-md px-3 ease-in-out duration-300 hover:opacity-70"
-            >
-              <FontAwesomeIcon icon={faGamepad} size="sm" className="mr-1" />
-              趣味
-            </Link>
-            <ModeToggle />
-          </div>
+          <ModeToggle />
         </div>
         <div className="lg:hidden">
           <div className="flex justify-between items-center h-full mt-6 mx-4">
@@ -131,42 +123,41 @@ export function Header() {
               />
             </button>
             <h5 className="mt-14 pl-3 bg-gray-500 text-white py-2.5">
-              <FontAwesomeIcon icon={faBars} className="mr-2" />
               MENU
             </h5>
             <Link
               href="/"
               className="text-gray-700 pl-3 py-2 mt-7 hover:bg-gray-200 transition duration-300"
             >
-              <FontAwesomeIcon icon={faHome} className="mr-2" />
+              <FaHome className="mr-2 inline mb-1" />
               トップページ
             </Link>
             <Link
               href="/tech"
               className="text-gray-700 pl-3 py-2 mt-7 hover:bg-gray-200 transition duration-300"
             >
-              <FontAwesomeIcon icon={faLaptopCode} className="mr-2" />
+              <FaLaptopCode className="mr-2 inline mb-1" />
               技術記事
             </Link>
             <Link
               href="/books"
               className="text-gray-700 pl-3 py-2 mt-7 hover:bg-gray-200 transition duration-300"
             >
-              <FontAwesomeIcon icon={faBookOpen} className="mr-2" />
+              <FaBook className="mr-2 inline mb-1" />
               読んだ本
             </Link>
             <Link
               href="/hobby"
               className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300"
             >
-              <FontAwesomeIcon icon={faGamepad} className="mr-2" />
+              <FaGamepad className="mr-2 inline mb-1" />
               趣味
             </Link>
             <Link
               href="/profile"
               className="text-gray-700 py-2 pl-3 mt-7 hover:bg-gray-200 transition duration-300"
             >
-              <FontAwesomeIcon icon={faUser} className="mr-2" />
+              <FaUser className="mr-2 inline mb-1" />
               プロフィール
             </Link>
           </nav>

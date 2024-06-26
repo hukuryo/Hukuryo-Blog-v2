@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock } from '@fortawesome/free-solid-svg-icons';
+import { FaClock } from "react-icons/fa";
 
 import { ArticleProps, ArticleContent } from '../types/article';
 import { headers } from 'next/headers';
@@ -34,7 +33,7 @@ const ArticleList: FC<ArticleProps> = async ({ pass }) => {
                   <span className="text-sm rounded-full p-2 bg-gray-200 mr-2">
                     {article.category}
                   </span>
-                  <FontAwesomeIcon icon={faClock} className="h-3 mr-1" />
+                  <FaClock className="h-3 mr-1 inline mb-1" />
                   <small>
                     {new Date(article.publishedAt).toLocaleDateString('ja-JP', {
                       year: 'numeric',

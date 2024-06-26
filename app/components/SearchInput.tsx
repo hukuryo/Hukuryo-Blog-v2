@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 export function SearchInput() {
   const [inputValue, setInputText] = useState('');
@@ -24,8 +23,8 @@ export function SearchInput() {
           placeholder="検索キーワード"
         />
         <Link href={`/search?s=${inputValue}`}>
-          <button className="bg-blue-500 px-4 py-2 hover:opacity-80 bg-primary-500 hover:bg-primary-600 text-white rounded-md">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <button className="bg-blue-500 px-4 py-3 hover:opacity-80 bg-primary-500 hover:bg-primary-600 text-white rounded-md">
+            <FaMagnifyingGlass />
           </button>
         </Link>
       </form>

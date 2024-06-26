@@ -1,12 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faAngleRight,
-  faFolder,
-  faHome,
-} from '@fortawesome/free-solid-svg-icons';
+import { FaHome, FaFolder, FaAngleRight } from "react-icons/fa";
 import { Tracking } from '../types/pageTracking';
 
 export function PageTracking(props: Tracking) {
@@ -16,23 +11,23 @@ export function PageTracking(props: Tracking) {
     <div className="py-3 pl-3 bg-gray-200 dark:bg-slate-900">
       <Link href="/" legacyBehavior>
         <a className="mr-3 text-sm hover:underline">
-          <FontAwesomeIcon size="sm" icon={faHome} className="mr-1" />
+          <FaHome className="mr-1 inline mb-1" />
           TOP
         </a>
       </Link>
-      <FontAwesomeIcon size="sm" icon={faAngleRight} />
+      <FaAngleRight className='inline mb-1'/>
       <Link href={`/${pass}`} legacyBehavior>
         <a className="ml-3 text-sm hover:underline">
-          <FontAwesomeIcon size="sm" icon={faFolder} className="mr-1" />
+          <FaFolder className="mr-1 inline mb-1" />
           {pageTitle}
         </a>
       </Link>
       {articleTitle == null ? null : (
         <>
-          <FontAwesomeIcon size="sm" icon={faAngleRight} className="ml-3" />
+          <FaAngleRight className="ml-3 inline mb-1" />
           <Link href={`/${pass}/${articlePass}`} legacyBehavior>
             <a className="ml-3 text-sm hover:underline">
-              <FontAwesomeIcon size="sm" icon={faFolder} className="mr-1" />
+              <FaFolder className="mr-1 inline mb-1" />
               {articleTitle}
             </a>
           </Link>
