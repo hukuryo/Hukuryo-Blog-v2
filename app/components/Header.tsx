@@ -53,6 +53,7 @@ export function Header() {
             <Button variant="outline" size="icon">
               <Link
                 href="https://twitter.com/hukuryo_"
+                target="blank"
               >
                 <FaXTwitter />
               </Link>
@@ -60,6 +61,7 @@ export function Header() {
             <Button variant="outline" size="icon" className="mx-3">
               <Link
                 href="https://github.com/hukuryo"
+                target="blank"
               >
                 <FaGithub />
               </Link>
@@ -79,6 +81,7 @@ export function Header() {
               <Button variant="outline" size="icon">
                 <Link
                   href="https://twitter.com/hukuryo_"
+                  target="blank"
                 >
                   <FaXTwitter />
                 </Link>
@@ -86,6 +89,7 @@ export function Header() {
               <Button variant="outline" size="icon" className="mx-3">
                 <Link
                   href="https://github.com/hukuryo"
+                  target="blank"
                 >
                   <FaGithub />
                 </Link>
