@@ -28,22 +28,6 @@ export function Profile() {
           </button>
         </Link>
       </div>
-      <div className="flex justify-center mt-10">
-        <Link
-          href="https://github.com/hukuryo"
-          className="mr-5 ease-in-out duration-300 hover:scale-110 hover:opacity-50"
-          target="blank"
-        >
-          <GitHubLogoIcon className="h-[1.2rem] w-[1.2rem]" />
-        </Link>
-        <Link
-          href="https://twitter.com/hukuryo_"
-          className="ease-in-out duration-300 hover:scale-110 hover:opacity-50"
-          target="blank"
-        >
-          <TwitterLogoIcon className="h-[1.2rem] w-[1.2rem]" />
-        </Link>
-      </div>
     </div>
   );
 }

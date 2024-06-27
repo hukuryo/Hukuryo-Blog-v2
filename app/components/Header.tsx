@@ -1,10 +1,12 @@
 'use client';
 
-import { FaHome, FaBook, FaUser, FaLaptopCode, FaGamepad } from "react-icons/fa";
+import { FaHome, FaBook, FaUser, FaLaptopCode, FaGamepad, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 import Link from 'next/link';
 import { useState } from 'react';
 import { ModeToggle } from './toggle';
+import { Button } from "./ui/button";
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -47,7 +49,24 @@ export function Header() {
               </Link>
             </div>
           </div>
-          <ModeToggle />
+          <div>
+            <Button variant="outline" size="icon">
+              <Link
+                href="https://twitter.com/hukuryo_"
+              >
+                <FaXTwitter />
+              </Link>
+            </Button>
+            <Button variant="outline" size="icon" className="mx-3">
+              <Link
+                href="https://github.com/hukuryo"
+              >
+                <FaGithub />
+              </Link>
+            </Button>
+            <ModeToggle />
+
+          </div>
         </div>
         <div className="lg:hidden">
           <div className="flex justify-between items-center h-full mt-6 mx-4">
@@ -57,6 +76,20 @@ export function Header() {
               </h1>
             </Link>
             <div>
+              <Button variant="outline" size="icon">
+                <Link
+                  href="https://twitter.com/hukuryo_"
+                >
+                  <FaXTwitter />
+                </Link>
+              </Button>
+              <Button variant="outline" size="icon" className="mx-3">
+                <Link
+                  href="https://github.com/hukuryo"
+                >
+                  <FaGithub />
+                </Link>
+              </Button>
               <ModeToggle />
               <button
                 onClick={handleMenuOpen}
@@ -87,7 +120,6 @@ export function Header() {
               </button>
             </div>
           </div>
-
           <nav
             className={
               openMenu

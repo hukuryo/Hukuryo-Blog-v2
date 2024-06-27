@@ -30,7 +30,7 @@ const ArticleList: FC<ArticleProps> = async ({ pass }) => {
                   />
                 </div>
                 <div className="p-4">
-                  <span className="text-sm rounded-full p-2 bg-gray-200 mr-2">
+                  <span className="text-sm rounded-full p-2 dark:bg-slate-600 mr-2">
                     {article.category}
                   </span>
                   <FaClock className="h-3 mr-1 inline mb-1" />
@@ -41,7 +41,7 @@ const ArticleList: FC<ArticleProps> = async ({ pass }) => {
                       day: 'numeric',
                     })}
                   </small>
-                  <h4 className="font-bold pt-2 text-slate-900 transition-colors group-hover:text-primary-500">
+                  <h4 className="font-bold pt-2 transition-colors group-hover:text-primary-500">
                     {article.title}
                   </h4>
                 </div>
