@@ -10,7 +10,7 @@ const ArticleList: FC<ArticleProps> = async ({ pass }) => {
   const headersList = headers();
   const host = headersList.get('x-forwarded-host');
   const protocol = headersList.get('x-forwarded-proto')
-  const response = await fetch(`${protocol}://${host}/api/article/${pass}`);
+  const response = await fetch(`${protocol}://${host}/api/article/${pass}`, { next: { revalidate: 3600 } });
   const articles = await response.json();
 
   return (
@@ -18,7 +18,7 @@ const ArticleList: FC<ArticleProps> = async ({ pass }) => {
       {articles.map((article: ArticleContent) => (
         <li key={article.id}>
           <Link href={`/${pass}/${article.id}`} legacyBehavior>
-            <a>
+            <a className='border-black'>
               <article className="shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:opacity-80">
                 <div className="h-auto">
                   <Image
@@ -30,7 +30,7 @@ const ArticleList: FC<ArticleProps> = async ({ pass }) => {
                   />
                 </div>
                 <div className="p-4">
-                  <span className="text-sm rounded-full p-2 dark:bg-slate-600 mr-2">
+                  <span className="text-sm rounded-full p-2 bg-slate-300 dark:bg-slate-600 mr-2">
                     {article.category}
                   </span>
                   <FaClock className="h-3 mr-1 inline mb-1" />
