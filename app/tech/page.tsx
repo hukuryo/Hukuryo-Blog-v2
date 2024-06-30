@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: '技術記事一覧',
 };
 
-export default function Article() {
+export default function Page() {
   return (
     <>
       <PageTracking pass={'tech'} pageTitle={'技術記事'} />

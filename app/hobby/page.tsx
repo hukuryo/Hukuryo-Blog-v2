@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: '趣味の記事一覧',
 };
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <PageTracking pass={'hobby'} pageTitle={'趣味'} />

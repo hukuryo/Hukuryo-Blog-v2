@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { PageTitle } from '../components/PageTitle';
 import ArticleList from '../components/ArticleList';
 import { Layout } from '@/app/components/Layout';
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
   description: '読んだ本',
 };
 
-export default async function page() {
+export default async function Page() {
   return (
     <>
       <PageTracking pass={'books'} pageTitle={'読んだ本'} />

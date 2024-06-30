@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'プロフィール',
 };
 
-export default function profile() {
+export default function Page() {
   return (
     <>
       <PageTracking pass={'profile'} pageTitle={'プロフィール紹介'} />
