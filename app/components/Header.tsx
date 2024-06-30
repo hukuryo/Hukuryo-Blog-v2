@@ -45,22 +45,22 @@ export function Header() {
             </div>
           </div>
           <div>
-            <Button variant="outline" size="icon">
-              <Link
-                href="https://twitter.com/hukuryo_"
-                target="blank"
-              >
+            <Link
+              href="https://twitter.com/hukuryo_"
+              target="blank"
+            >
+              <Button variant="outline" size="icon">
                 <FaXTwitter />
-              </Link>
-            </Button>
-            <Button variant="outline" size="icon" className="mx-3">
-              <Link
-                href="https://github.com/hukuryo"
-                target="blank"
-              >
+              </Button>
+            </Link>
+            <Link
+              href="https://github.com/hukuryo"
+              target="blank"
+            >
+              <Button variant="outline" size="icon" className="mx-3">
                 <FaGithub />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
             <ModeToggle />
 
           </div>
@@ -73,22 +73,22 @@ export function Header() {
               </h1>
             </Link>
             <div>
-              <Button variant="outline" size="icon">
-                <Link
-                  href="https://twitter.com/hukuryo_"
-                  target="blank"
-                >
+              <Link
+                href="https://twitter.com/hukuryo_"
+                target="blank"
+              >
+                <Button variant="outline" size="icon">
                   <FaXTwitter />
-                </Link>
-              </Button>
-              <Button variant="outline" size="icon" className="mx-3">
-                <Link
-                  href="https://github.com/hukuryo"
-                  target="blank"
-                >
+                </Button>
+              </Link>
+              <Link
+                href="https://github.com/hukuryo"
+                target="blank"
+              >
+                <Button variant="outline" size="icon" className="mx-3">
                   <FaGithub />
-                </Link>
-              </Button>
+                </Button>
+              </Link>
               <ModeToggle />
               <HumburgerMenu />
             </div>
