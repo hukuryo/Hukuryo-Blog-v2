@@ -1,7 +1,3 @@
-import Head from 'next/head';
-import { client } from '../lib/client';
-
-import { Header } from '../components/Header';
 import { PageTitle } from '../components/PageTitle';
 import ArticleList from '../components/ArticleList';
 import { PageTracking } from '@/app/components/PageTracking';
