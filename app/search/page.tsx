@@ -18,7 +18,7 @@ export default function Page() {
       <Layout>
         <PageTitle title={'検索'} />
         <div className="md:flex justify-between">
-          <SearchArticleList pass={'search'} searchPass={'fff'} />
+          <SearchArticleList pass={'search'} />
           <SideBar />
         </div>
         <ResponsiveProfile />
