@@ -22,21 +22,21 @@ export function Header() {
             </div>
             <div className='ml-5'>
               <Link
-                href="/tech"
+                href="/articles/tech"
                 className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
               >
                 <FaLaptopCode className='inline mr-1 mb-1'/>
                 技術記事
               </Link>
               <Link
-                href="/books"
+                href="/articles/book"
                 className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
               >
                 <FaBook className='inline mr-1 mb-1'/>
                 読んだ本
               </Link>
               <Link
-                href="/hobby"
+                href="/articles/hobby"
                 className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
               >
                 <FaGamepad className='inline mr-1 mb-1'/>

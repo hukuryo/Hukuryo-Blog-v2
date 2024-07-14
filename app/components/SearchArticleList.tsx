@@ -3,23 +3,33 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaClock } from "react-icons/fa";
 
-import { ArticleProps, ArticleContent } from '../types/article';
-import { headers } from 'next/headers';
+import { ArticleContent } from '../types/article';
 import { client } from '../lib/client';
 
 interface SearchArticleProps {
   pass: string
-  searchPass: string
 }
 
-const SearchArticleList: FC<ArticleProps> = async ({ pass, searchPass }: SearchArticleProps) => {
+const SearchArticleList: FC<SearchArticleProps> = async ({ pass }: SearchArticleProps) => {
   const articles = await client.get({
     endpoint: 'articles',
   });
 
-  const articlesByTypes: ArticleContent[] = articles.contents.filter(
-    (article: ArticleContent) => article.title[0] === 'books',
-  );
+  // const articlesByTypes: ArticleContent[] = articles.contents.filter(
+  //   (article: ArticleContent) => article.title[0] === searchPass,
+  // );
+
+  console.log(articles)
+
+  if(articles.length == 0){
+    return(
+      <>
+        <div>
+          該当する記事はありません。
+        </div>
+      </>
+    )
+  }
 
 
   return (

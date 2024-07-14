@@ -81,7 +81,7 @@ export function Footer() {
               <li className="mb-3">
                 <Link
                   className="text-md hover:opacity-60 hover:underline"
-                  href="/tech"
+                  href="/articles/tech"
                 >
                   技術記事
                 </Link>
@@ -89,7 +89,7 @@ export function Footer() {
               <li className="mb-3">
                 <Link
                   className="text-md hover:opacity-60 hover:underline"
-                  href="/books"
+                  href="/articles/book"
                 >
                   読んだ本
                 </Link>
@@ -97,7 +97,7 @@ export function Footer() {
               <li className="mb-3">
                 <Link
                   className="text-md hover:opacity-60 hover:underline"
-                  href="/hobby"
+                  href="/articles/hobby"
                 >
                   趣味
                 </Link>

@@ -31,21 +31,21 @@ export function HumburgerMenu() {
               トップページ
             </Link>
             <Link
-              href="/tech"
+              href="/articles/tech"
               className="text-gray-700 py-2 mt-7 hover:bg-gray-200 transition duration-300"
             >
               <FaLaptopCode className="mr-2 inline mb-1" />
               技術記事
             </Link>
             <Link
-              href="/books"
+              href="/articles/book"
               className="text-gray-700 py-2 mt-7 hover:bg-gray-200 transition duration-300"
             >
               <FaBook className="mr-2 inline mb-1" />
               読んだ本
             </Link>
             <Link
-              href="/hobby"
+              href="/articles/hobby"
               className="text-gray-700 py-2 mt-7 hover:bg-gray-200 transition duration-300"
             >
               <FaGamepad className="mr-2 inline mb-1" />
