@@ -16,7 +16,7 @@ export default function Page() {
     <>
       <PageTracking pass={'search'} pageTitle={'記事を検索'} />
       <Layout>
-        <PageTitle title={'検索'} />
+        <PageTitle title={'検索ページ'} />
         <div className="md:flex justify-between">
           <SearchArticleList pass={'search'} />
           <SideBar />

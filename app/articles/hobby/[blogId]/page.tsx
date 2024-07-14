@@ -1,8 +1,8 @@
-import { SideBar } from '../../components/SideBar';
+import { SideBar } from '../../../components/SideBar';
 import { PageTracking } from '@/app/components/PageTracking';
-import { ArticleContent } from '../../types/article';
+import { ArticleContent } from '../../../types/article';
 import { ArticlePageLayout } from '@/app/components/ArticlePageLayout';
-import { DetailBody } from '../../components/articleDetail/DetailBody';
+import { DetailBody } from '../../../components/articleDetail/DetailBody';
 import { blodDetailData } from '@/app/lib/microcms';
 import { Metadata } from 'next';
 
@@ -25,8 +25,8 @@ export default async function Page({ params }: { params: { blogId: string } }) {
   return (
     <>
       <PageTracking
-        pass={'tech'}
-        pageTitle={'技術記事'}
+        pass={'hobby'}
+        pageTitle={'趣味'}
         articleTitle={blogData.title}
         articlePass={blogData.id}
       />
