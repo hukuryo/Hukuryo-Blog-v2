@@ -1,68 +1,60 @@
 'use client';
 
 import Link from 'next/link';
-import { FaBook, FaLaptopCode, FaGamepad, FaGithub } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaBook, FaLaptopCode, FaGamepad, FaGithub } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
-import { Button } from "./ui/button";
-import { ModeToggle } from './toggle';
-import { HumburgerMenu } from "./HamburgerMenu";
+import { Button } from './ui/button';
+import { ModeToggle } from '../components/ui/toggle';
+import { HumburgerMenu } from './HamburgerMenu';
 
 export function Header() {
-
   return (
     <header>
       <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
         <div className="items-center justify-between hidden lg:flex w-full mx-5">
-          <div className='flex items-center'>
+          <div className="flex items-center">
             <div className="font-bold text-2xl mb-1">
               <Link href="/" className="hover:opacity-70">
                 Hukuryo-no-Blog
               </Link>
             </div>
-            <div className='ml-5'>
+            <div className="ml-5">
               <Link
                 href="/articles/tech"
                 className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
               >
-                <FaLaptopCode className='inline mr-1 mb-1'/>
+                <FaLaptopCode className="inline mr-1 mb-1" />
                 技術記事
               </Link>
               <Link
                 href="/articles/book"
                 className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
               >
-                <FaBook className='inline mr-1 mb-1'/>
+                <FaBook className="inline mr-1 mb-1" />
                 読んだ本
               </Link>
               <Link
                 href="/articles/hobby"
                 className="text-sm px-3 ease-in-out duration-300 hover:opacity-70"
               >
-                <FaGamepad className='inline mr-1 mb-1'/>
+                <FaGamepad className="inline mr-1 mb-1" />
                 趣味
               </Link>
             </div>
           </div>
           <div>
-            <Link
-              href="https://twitter.com/hukuryo_"
-              target="blank"
-            >
+            <Link href="https://twitter.com/hukuryo_" target="blank">
               <Button variant="outline" size="icon">
                 <FaXTwitter />
               </Button>
             </Link>
-            <Link
-              href="https://github.com/hukuryo"
-              target="blank"
-            >
+            <Link href="https://github.com/hukuryo" target="blank">
               <Button variant="outline" size="icon" className="mx-3">
                 <FaGithub />
               </Button>
             </Link>
             <ModeToggle />
-
           </div>
         </div>
         <div className="lg:hidden">
@@ -73,18 +65,12 @@ export function Header() {
               </h1>
             </Link>
             <div>
-              <Link
-                href="https://twitter.com/hukuryo_"
-                target="blank"
-              >
+              <Link href="https://twitter.com/hukuryo_" target="blank">
                 <Button variant="outline" size="icon">
                   <FaXTwitter />
                 </Button>
               </Link>
-              <Link
-                href="https://github.com/hukuryo"
-                target="blank"
-              >
+              <Link href="https://github.com/hukuryo" target="blank">
                 <Button variant="outline" size="icon" className="mx-3">
                   <FaGithub />
                 </Button>
