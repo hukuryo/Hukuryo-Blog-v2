@@ -14,7 +14,7 @@ export default function Home() {
       <main className="pt-10 sm:px-20 pb-4 px-5">
         <div className="flex flex-row-reverse">
           <SideBar />
-          <div className="w-full px-10 py-5 pb-10 shadow-lg rounded-md">
+          <div className="w-full px-10 py-5 pb-10 mb-10 shadow-lg rounded-md bg-white">
             <PageTitle title={'トップページ'} />
             <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>
             <p className="mt-8">

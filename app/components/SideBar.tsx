@@ -10,7 +10,6 @@ export const SideBar = () => {
       >
         <SearchInput />
         <Profile />
-        {/* <Recommendation articles={ articles } pass={pass}/> */}
       </aside>
     </>
   );

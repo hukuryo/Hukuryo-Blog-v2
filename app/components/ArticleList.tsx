@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaClock } from "react-icons/fa";
+import { FaClock } from 'react-icons/fa';
 
 import { ArticleProps, ArticleContent } from '../types/article';
 import { headers } from 'next/headers';
@@ -9,8 +9,10 @@ import { headers } from 'next/headers';
 const ArticleList: FC<ArticleProps> = async ({ pass }) => {
   const headersList = headers();
   const host = headersList.get('x-forwarded-host');
-  const protocol = headersList.get('x-forwarded-proto')
-  const response = await fetch(`${protocol}://${host}/api/article/${pass}`, { next: { revalidate: 3600 } });
+  const protocol = headersList.get('x-forwarded-proto');
+  const response = await fetch(`${protocol}://${host}/api/article/${pass}`, {
+    next: { revalidate: 3600 },
+  });
   const articles = await response.json();
 
   return (
@@ -18,8 +20,8 @@ const ArticleList: FC<ArticleProps> = async ({ pass }) => {
       {articles.map((article: ArticleContent) => (
         <li key={article.id}>
           <Link href={`/${pass}/${article.id}`} legacyBehavior>
-            <a className='border-black'>
-              <article className="shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:opacity-80">
+            <a className="border-black">
+              <article className="shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:opacity-80 bg-white dark:bg-slate-800">
                 <div className="h-auto">
                   <Image
                     src={article.imageUrl.url}
