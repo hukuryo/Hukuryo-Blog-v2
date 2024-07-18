@@ -17,7 +17,7 @@ export default function Page() {
       <main className="pt-10 sm:px-20 pb-48 px-5">
         <div className="flex flex-row-reverse">
           <SideBar />
-          <div className="w-full px-10 py-5 pb-10 shadow-lg rounded-md">
+          <div className="w-full px-10 py-5 pb-10 shadow-lg rounded-md bg-white dark:bg-slate-900">
             <PageTitle title={'プロフィール紹介'} />
             <p className="mt-16">
               このページでは筆者の経歴などについて紹介します。
@@ -45,7 +45,7 @@ export default function Page() {
                 <li className="mb-3">
                   ・{' '}
                   <Link
-                    className="text-lg text-blue-500 hover:underline"
+                    className="text-lg text-blue-500 hover:underline dark:text-white"
                     href="https://qiita.com/hukuryo"
                   >
                     Qiita
@@ -54,7 +54,7 @@ export default function Page() {
                 <li className="mb-3">
                   ・{' '}
                   <Link
-                    className="text-lg text-blue-500 hover:underline"
+                    className="text-lg text-blue-500 hover:underline dark:text-white"
                     href="https://zenn.dev/ryohei0509"
                   >
                     Zenn
@@ -63,7 +63,7 @@ export default function Page() {
                 <li className="mb-3">
                   ・{' '}
                   <Link
-                    className="text-lg text-blue-500 hover:underline"
+                    className="text-lg text-blue-500 hover:underline dark:text-white"
                     href="https://github.com/hukuryo"
                   >
                     GitHub
@@ -72,7 +72,7 @@ export default function Page() {
                 <li>
                   ・{' '}
                   <Link
-                    className="text-lg text-blue-500 hover:underline"
+                    className="text-lg text-blue-500 hover:underline dark:text-white"
                     href="https://twitter.com/hukuryo_"
                   >
                     Twitter(X)
