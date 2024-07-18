@@ -5,7 +5,7 @@ import { GitHubLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 
 export function Profile() {
   return (
-    <div className="text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full bg-white">
+    <div className="text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full bg-white dark:bg-black">
       <div className="text-center flex justify-center mb-3">
         <Image
           src="/profile.png"
