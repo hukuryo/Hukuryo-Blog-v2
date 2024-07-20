@@ -1,11 +1,11 @@
 import React from 'react';
-import { SearchInput } from './SearchInput';
+import { SearchInputForm } from './SearchInputForm';
 import { Profile } from './Profile';
 
 export function ResponsiveProfile() {
   return (
     <div className="lg:hidden mt-20">
-      <SearchInput />
+      <SearchInputForm />
       <Profile />
     </div>
   );

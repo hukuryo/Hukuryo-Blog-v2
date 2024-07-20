@@ -1,4 +1,4 @@
-import { SearchInput } from '@/app/components/SearchInput';
+import { SearchInputForm } from '@/app/components/SearchInputForm';
 import { Profile } from '@/app/components/Profile';
 
 export const SideBar = () => {
@@ -8,7 +8,7 @@ export const SideBar = () => {
         id="cta-button-sidebar"
         className="h-full ml-10 hidden mb-5 lg:block"
       >
-        <SearchInput />
+        <SearchInputForm />
         <Profile />
       </aside>
     </>
