@@ -1,6 +1,39 @@
 import React from 'react';
 import Link from 'next/link';
 
+const siteLinks = [
+  { href: 'https://qiita.com/hukuryo', title: 'Qiita' },
+  { href: 'https://zenn.dev/ryohei0509', title: 'Zenn' },
+  { href: 'https://github.com/hukuryo', title: 'GitHub' },
+  { href: 'https://twitter.com/hukuryo_', title: 'Twitter(X)' },
+  { href: 'https://www.wantedly.com/id/ryohei0509', title: 'Wantedly' },
+];
+
+const profileLinks = [{ href: '/profile', title: 'プロフィール' }];
+
+const categoryLinks = [
+  { href: '/articles/tech', title: '技術記事' },
+  { href: '/articles/book', title: '読んだ本' },
+  { href: '/articles/hobby', title: '趣味' },
+];
+
+type SiteLinkProps = {
+  href: string;
+  title: string;
+};
+
+const SiteLink = ({ href, title }: SiteLinkProps) => (
+  <li className="mb-3">
+    <Link
+      className="text-md hover:opacity-60 hover:underline"
+      href={href}
+      target="_blank"
+    >
+      {title}
+    </Link>
+  </li>
+);
+
 export function Footer() {
   return (
     <footer className="py-7 shadow-lg">
@@ -11,51 +44,9 @@ export function Footer() {
               サイト
             </h3>
             <ul>
-              <li className="mb-3">
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="https://qiita.com/hukuryo"
-                  target="blank"
-                >
-                  Qiita
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="https://zenn.dev/ryohei0509"
-                  target="blank"
-                >
-                  Zenn
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="https://github.com/hukuryo"
-                  target="blank"
-                >
-                  GitHub
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="https://twitter.com/hukuryo_"
-                  target="blank"
-                >
-                  Twitter(X)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="https://www.wantedly.com/id/ryohei0509"
-                  target="blank"
-                >
-                  Wantedly
-                </Link>
-              </li>
+              {siteLinks.map((link) => (
+                <SiteLink key={link.href} href={link.href} title={link.title} />
+              ))}
             </ul>
           </div>
           <div>
@@ -63,14 +54,9 @@ export function Footer() {
               プロフィール
             </h3>
             <ul>
-              <li className="mb-3">
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="/profile"
-                >
-                  プロフィール
-                </Link>
-              </li>
+              {profileLinks.map((link) => (
+                <SiteLink key={link.href} href={link.href} title={link.title} />
+              ))}
             </ul>
           </div>
           <div>
@@ -78,36 +64,15 @@ export function Footer() {
               カテゴリー
             </h3>
             <ul>
-              <li className="mb-3">
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="/articles/tech"
-                >
-                  技術記事
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="/articles/book"
-                >
-                  読んだ本
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link
-                  className="text-md hover:opacity-60 hover:underline"
-                  href="/articles/hobby"
-                >
-                  趣味
-                </Link>
-              </li>
+              {categoryLinks.map((link) => (
+                <SiteLink key={link.href} href={link.href} title={link.title} />
+              ))}
             </ul>
           </div>
         </div>
         <hr className="mt-10 mb-10" />
         <span className="block text-center text-gray-600 dark:text-gray-400">
-          © 2023 Hukuryo-no-Blog
+          © 2024 Hukuryo-no-Blog
         </span>
       </div>
     </footer>
