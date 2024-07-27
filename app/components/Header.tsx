@@ -5,7 +5,7 @@ import { FaBook, FaLaptopCode, FaGamepad, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Button } from './ui/button';
 import { ModeToggle } from '../components/ui/toggle';
-import { HumburgerMenu } from './HamburgerMenu';
+import { HamburgerMenu } from './HamburgerMenu';
 
 interface NavLink {
   href: string;
@@ -82,7 +82,7 @@ export function Header() {
             <div>
               <SocialButtons />
               <ModeToggle />
-              <HumburgerMenu />
+              <HamburgerMenu />
             </div>
           </div>
         </div>
