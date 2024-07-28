@@ -3,7 +3,7 @@ import { PageTracking } from '@/app/components/PageTracking';
 import { ArticleContent } from '../../../types/article';
 import { ArticlePageLayout } from '@/app/components/ArticlePageLayout';
 import { DetailBody } from '../../../components/articleDetail/DetailBody';
-import { blodDetailData } from '@/app/lib/microcms';
+import { blogDetailData } from '@/app/lib/microcms';
 import { Metadata } from 'next';
 
 export const generateMetadata = async ({
@@ -11,7 +11,7 @@ export const generateMetadata = async ({
 }: {
   params: { blogId: string };
 }): Promise<Metadata> => {
-  const blogData: ArticleContent = await blodDetailData(params.blogId);
+  const blogData: ArticleContent = await blogDetailData(params.blogId);
 
   return {
     title: blogData.title,
@@ -20,7 +20,7 @@ export const generateMetadata = async ({
 };
 
 export default async function Page({ params }: { params: { blogId: string } }) {
-  const blogData: ArticleContent = await blodDetailData(params.blogId);
+  const blogData: ArticleContent = await blogDetailData(params.blogId);
 
   return (
     <>

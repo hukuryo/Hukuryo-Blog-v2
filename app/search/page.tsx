@@ -7,7 +7,7 @@ import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '趣味の記事一覧',
+  title: '検索の記事一覧',
   description: '趣味の記事一覧',
 };
 
@@ -18,7 +18,7 @@ export default function Page() {
       <Layout>
         <PageTitle title={'検索ページ'} />
         <div className="md:flex justify-between">
-          <SearchArticleList pass={'search'} />
+          {/* <SearchArticleList pass={'search'} /> */}
           <SideBar />
         </div>
         <ResponsiveProfile />
