@@ -7,18 +7,28 @@ import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '検索の記事一覧',
-  description: '趣味の記事一覧',
+  title: '記事の検索',
+  description: '記事の検索結果を表示します',
 };
 
-export default function Page() {
+interface SearchPageProps {
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function Page({ searchParams }: SearchPageProps) {
+  const searchQuery = Array.isArray(searchParams.s)
+    ? searchParams.s[0]
+    : searchParams.s || '';
+
+  const pageTitle = searchQuery ? `「${searchQuery}」の検索結果` : '記事の検索';
+
   return (
     <>
-      <PageTracking pass={'search'} pageTitle={'記事を検索'} />
+      <PageTracking pass="search" pageTitle={pageTitle} />
       <Layout>
-        <PageTitle title={'検索ページ'} />
+        <PageTitle title={pageTitle} />
         <div className="md:flex justify-between">
-          {/* <SearchArticleList pass={'search'} /> */}
+          <SearchArticleList pass="search" searchQuery={searchQuery} />
           <SideBar />
         </div>
         <ResponsiveProfile />
