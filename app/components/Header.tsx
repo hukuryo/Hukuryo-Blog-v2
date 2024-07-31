@@ -20,7 +20,7 @@ interface SocialLink {
 
 const NAV_LINKS: NavLink[] = [
   { href: '/articles/tech', icon: FaLaptopCode, text: '技術記事' },
-  { href: '/articles/book', icon: FaBook, text: '読んだ本' },
+  { href: '/articles/books', icon: FaBook, text: '読んだ本' },
   { href: '/articles/hobby', icon: FaGamepad, text: '趣味' },
 ];
 

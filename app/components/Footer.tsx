@@ -12,7 +12,7 @@ const linksData = {
   profileLinks: [{ href: '/profile', title: 'プロフィール' }],
   categoryLinks: [
     { href: '/articles/tech', title: '技術記事' },
-    { href: '/articles/book', title: '読んだ本' },
+    { href: '/articles/books', title: '読んだ本' },
     { href: '/articles/hobby', title: '趣味' },
   ],
 };

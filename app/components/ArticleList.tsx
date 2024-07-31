@@ -6,8 +6,6 @@ import { client } from '../lib/client';
 
 import { ArticleContent } from '../types/article';
 
-const REVALIDATION_TIME = 3600; // 1時間
-
 async function fetchArticles(pass: string): Promise<ArticleContent[]> {
   const response = await client.get({
     endpoint: 'articles',
@@ -23,7 +21,7 @@ interface ArticleCardProps {
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, pass }) => (
-  <Link href={`/${pass}/${article.id}`} legacyBehavior>
+  <Link href={`/articles/${pass}/${article.id}`} legacyBehavior>
     <a className="border-black">
       <article className="shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:opacity-80 bg-white dark:bg-slate-800">
         <div className="h-auto">

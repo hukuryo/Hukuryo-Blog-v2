@@ -21,6 +21,7 @@ export const generateMetadata = async ({
 
 export default async function Page({ params }: { params: { blogId: string } }) {
   const blogData: ArticleContent = await blogDetailData(params.blogId);
+  console.log(blogData);
 
   return (
     <>
