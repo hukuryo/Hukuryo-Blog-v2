@@ -8,7 +8,7 @@ type imageUrl = {
 export function DetailImage(props: imageUrl) {
   const { imageUrl } = props;
   return (
-    <div className="bg-secondary-100/50">
+    <div className="bg-secondary-100/50 dark:bg-slate-700">
       <div className="w-full mb-10">
         <Image
           src={imageUrl}

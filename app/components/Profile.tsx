@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { GitHubLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 
 export function Profile() {
   return (
-    <div className="text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full bg-white dark:bg-black">
+    <div className="text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full bg-white dark:bg-slate-800">
       <div className="text-center flex justify-center mb-3">
         <Image
           src="/profile.png"
