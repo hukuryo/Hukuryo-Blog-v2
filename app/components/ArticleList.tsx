@@ -2,25 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaClock } from 'react-icons/fa';
-import { headers } from 'next/headers';
+import { client } from '../lib/client';
 
 import { ArticleContent } from '../types/article';
 
 const REVALIDATION_TIME = 3600; // 1時間
 
 async function fetchArticles(pass: string): Promise<ArticleContent[]> {
-  const headersList = headers();
-  const host = headersList.get('x-forwarded-host');
-  const protocol = headersList.get('x-forwarded-proto');
-  const response = await fetch(`${protocol}://${host}/api/article/${pass}`, {
-    next: { revalidate: REVALIDATION_TIME },
+  const response = await client.get({
+    endpoint: 'articles',
+    queries: { filters: `kinds[contains]${pass}` },
   });
 
-  if (!response.ok) {
-    throw new Error('Failed to fetch articles');
-  }
-
-  return response.json();
+  return response.contents;
 }
 
 interface ArticleCardProps {
