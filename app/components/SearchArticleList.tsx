@@ -31,7 +31,7 @@ interface ArticleCardProps {
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, pass }) => (
-  <Link href={`/${pass}/${article.id}`} legacyBehavior>
+  <Link href={`/articles/${pass}/${article.id}`} legacyBehavior>
     <a className="border-black">
       <article className="shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:opacity-80 bg-white dark:bg-slate-800">
         <div className="h-auto">
@@ -64,12 +64,10 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, pass }) => (
 );
 
 interface SearchArticleProps {
-  pass: string;
   searchQuery?: string;
 }
 
 const SearchArticleList: React.FC<SearchArticleProps> = async ({
-  pass,
   searchQuery,
 }) => {
   try {
@@ -89,7 +87,7 @@ const SearchArticleList: React.FC<SearchArticleProps> = async ({
         <ul className="mt-8 grid grid-cols-1 gap-6 w-full mr-5 md:grid-cols-2">
           {articles.map((article) => (
             <li key={article.id}>
-              <ArticleCard article={article} pass={pass} />
+              <ArticleCard article={article} pass={article.kinds} />
             </li>
           ))}
         </ul>

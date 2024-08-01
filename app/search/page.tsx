@@ -28,7 +28,7 @@ export default function Page({ searchParams }: SearchPageProps) {
       <Layout>
         <PageTitle title={pageTitle} />
         <div className="md:flex justify-between">
-          <SearchArticleList pass="search" searchQuery={searchQuery} />
+          <SearchArticleList searchQuery={searchQuery} />
           <SideBar />
         </div>
         <ResponsiveProfile />
