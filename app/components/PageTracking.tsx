@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { FaHome, FaFolder, FaAngleRight } from "react-icons/fa";
+import { FaHome, FaFolder, FaAngleRight } from 'react-icons/fa';
 import { Tracking } from '../types/pageTracking';
 
 export function PageTracking(props: Tracking) {
@@ -15,8 +15,8 @@ export function PageTracking(props: Tracking) {
           TOP
         </a>
       </Link>
-      <FaAngleRight className='inline mb-1'/>
-      <Link href={`/${pass}`} legacyBehavior>
+      <FaAngleRight className="inline mb-1" />
+      <Link href={`/articles/${pass}`} legacyBehavior>
         <a className="ml-3 text-sm hover:underline">
           <FaFolder className="mr-1 inline mb-1" />
           {pageTitle}
@@ -25,7 +25,7 @@ export function PageTracking(props: Tracking) {
       {articleTitle == null ? null : (
         <>
           <FaAngleRight className="ml-3 inline mb-1" />
-          <Link href={`/${pass}/${articlePass}`} legacyBehavior>
+          <Link href={`/articles/${pass}/${articlePass}`} legacyBehavior>
             <a className="ml-3 text-sm hover:underline">
               <FaFolder className="mr-1 inline mb-1" />
               {articleTitle}
