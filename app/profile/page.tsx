@@ -30,6 +30,7 @@ const ProfileLink = ({
     <Link
       className="text-lg text-blue-500 hover:underline dark:text-white"
       href={href}
+      target="blank"
     >
       {children}
     </Link>
