@@ -20,14 +20,15 @@ const linksData = {
 type SiteLinkProps = {
   href: string;
   title: string;
+  isSiteLink: boolean;
 };
 
-const SiteLink = ({ href, title }: SiteLinkProps) => (
+const SiteLink = ({ href, title, isSiteLink }: SiteLinkProps) => (
   <li className="mb-3">
     <Link
       className="text-md hover:opacity-60 hover:underline"
       href={href}
-      target="_blank"
+      target={isSiteLink ? '_blank' : undefined}
     >
       {title}
     </Link>
@@ -36,7 +37,7 @@ const SiteLink = ({ href, title }: SiteLinkProps) => (
 
 type LinksSectionProps = {
   title: string;
-  links: SiteLinkProps[];
+  links: { href: string; title: string }[];
 };
 
 const LinksSection = ({ title, links }: LinksSectionProps) => (
@@ -46,7 +47,12 @@ const LinksSection = ({ title, links }: LinksSectionProps) => (
     </h3>
     <ul>
       {links.map((link) => (
-        <SiteLink key={link.href} href={link.href} title={link.title} />
+        <SiteLink
+          key={link.href}
+          href={link.href}
+          title={link.title}
+          isSiteLink={title === 'サイト'}
+        />
       ))}
     </ul>
   </div>
