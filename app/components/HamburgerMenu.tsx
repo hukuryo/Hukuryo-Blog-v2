@@ -15,10 +15,11 @@ import {
   FaLaptopCode,
   FaUser,
 } from 'react-icons/fa';
+import { ElementType, FC } from 'react';
 
 interface MenuItem {
   href: string;
-  icon: React.ElementType;
+  icon: ElementType;
   text: string;
 }
 
@@ -30,7 +31,7 @@ const MENU_ITEMS: MenuItem[] = [
   { href: '/profile', icon: FaUser, text: 'プロフィール' },
 ];
 
-const MenuLink: React.FC<MenuItem> = ({ href, icon: Icon, text }) => (
+const MenuLink: FC<MenuItem> = ({ href, icon: Icon, text }) => (
   <Link
     href={href}
     className="text-gray-700 dark:text-gray-300 py-2 mt-7 hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300 first:mt-4 pl-2"
