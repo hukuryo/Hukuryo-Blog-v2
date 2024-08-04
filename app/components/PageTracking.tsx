@@ -1,35 +1,36 @@
 import React from 'react';
 import Link from 'next/link';
-
 import { FaHome, FaFolder, FaAngleRight } from 'react-icons/fa';
 import { Tracking } from '../types/pageTracking';
 
-export function PageTracking(props: Tracking) {
-  const { pass, pageTitle, articleTitle, articlePass } = props;
+const ICON_CLASS = 'inline mb-1';
+const LINK_CLASS = 'text-sm hover:underline';
+const CONTAINER_CLASS = 'py-3 pl-3 bg-gray-200 dark:bg-slate-900';
+const MARGIN_RIGHT_CLASS = 'mr-3';
 
+export function PageTracking({
+  pass,
+  pageTitle,
+  articleTitle,
+  articlePass,
+}: Tracking) {
   return (
-    <div className="py-3 pl-3 bg-gray-200 dark:bg-slate-900">
-      <Link href="/" legacyBehavior>
-        <a className="mr-3 text-sm hover:underline">
-          <FaHome className="mr-1 inline mb-1" />
-          TOP
-        </a>
+    <div className={CONTAINER_CLASS}>
+      <Link href="/" className={`${LINK_CLASS} ${MARGIN_RIGHT_CLASS}`}>
+        <FaHome className={ICON_CLASS} /> TOP
       </Link>
-      <FaAngleRight className="inline mb-1" />
-      <Link href={`/articles/${pass}`} legacyBehavior>
-        <a className="ml-3 text-sm hover:underline">
-          <FaFolder className="mr-1 inline mb-1" />
-          {pageTitle}
-        </a>
+      <FaAngleRight className={ICON_CLASS} />
+      <Link href={`/articles/${pass}`} className={`${LINK_CLASS} ml-3`}>
+        <FaFolder className={ICON_CLASS} /> {pageTitle}
       </Link>
-      {articleTitle == null ? null : (
+      {articleTitle && (
         <>
-          <FaAngleRight className="ml-3 inline mb-1" />
-          <Link href={`/articles/${pass}/${articlePass}`} legacyBehavior>
-            <a className="ml-3 text-sm hover:underline">
-              <FaFolder className="mr-1 inline mb-1" />
-              {articleTitle}
-            </a>
+          <FaAngleRight className={`ml-3 ${ICON_CLASS}`} />
+          <Link
+            href={`/articles/${pass}/${articlePass}`}
+            className={`${LINK_CLASS} ml-3`}
+          >
+            <FaFolder className={ICON_CLASS} /> {articleTitle}
           </Link>
         </>
       )}

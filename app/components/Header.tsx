@@ -53,7 +53,7 @@ const NavLinks: React.FC = () => (
 const SocialButtons: React.FC = () => (
   <>
     {SOCIAL_LINKS.map(({ href, icon: Icon }) => (
-      <Link key={href} href={href} target="blank">
+      <Link key={href} href={href} target="_blank" rel="noopener noreferrer">
         <Button variant="outline" size="icon" className="mx-1">
           <Icon />
         </Button>
@@ -71,7 +71,7 @@ export function Header() {
             <Logo />
             <NavLinks />
           </div>
-          <div>
+          <div className="flex items-center">
             <SocialButtons />
             <ModeToggle />
           </div>
@@ -79,7 +79,7 @@ export function Header() {
         <div className="lg:hidden">
           <div className="flex justify-between items-center h-full mt-6 mx-4">
             <Logo />
-            <div>
+            <div className="flex items-center">
               <SocialButtons />
               <ModeToggle />
               <HamburgerMenu />
