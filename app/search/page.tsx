@@ -6,21 +6,35 @@ import { SideBar } from '@/app/components/SideBar';
 import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: '記事の検索',
-  description: '記事の検索結果を表示します',
-};
-
 interface SearchPageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default function Page({ searchParams }: SearchPageProps) {
-  const searchQuery = Array.isArray(searchParams.s)
-    ? searchParams.s[0]
-    : searchParams.s || '';
+const getSearchQuery = (
+  searchParams: SearchPageProps['searchParams'],
+): string => {
+  const s = searchParams.s;
+  return Array.isArray(s) ? s[0] : s || '';
+};
 
-  const pageTitle = searchQuery ? `「${searchQuery}」の検索結果` : '記事の検索';
+const generatePageTitle = (searchQuery: string): string =>
+  searchQuery ? `「${searchQuery}」の検索結果` : '記事の検索';
+
+export async function generateMetadata({
+  searchParams,
+}: SearchPageProps): Promise<Metadata> {
+  const searchQuery = getSearchQuery(searchParams);
+  const pageTitle = generatePageTitle(searchQuery);
+
+  return {
+    title: pageTitle,
+    description: `${pageTitle}を表示します`,
+  };
+}
+
+export default function Page({ searchParams }: SearchPageProps) {
+  const searchQuery = getSearchQuery(searchParams);
+  const pageTitle = generatePageTitle(searchQuery);
 
   return (
     <>
