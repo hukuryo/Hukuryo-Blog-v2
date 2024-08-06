@@ -1,30 +1,25 @@
-type ImageUrl = {
-  url: string;
-};
-
-export type ArticleContent = {
+type BaseContent = {
   id: number;
   title: string;
   publishedAt: string;
-  imageUrl: ImageUrl;
   body: string;
   category: string;
-  pass: string;
   kinds: string;
+};
+
+type ImageUrl = { url: string };
+
+export type ArticleContent = BaseContent & {
+  imageUrl: ImageUrl;
+  pass: string;
+};
+
+export type BlogContent = BaseContent & {
+  imageUrl: ImageUrl;
 };
 
 export type ArticleProps = {
   pass: string;
-};
-
-export type BlogContent = {
-  id: number;
-  imageUrl: ImageUrl;
-  title: string;
-  publishedAt: string;
-  body: string;
-  category: string;
-  kinds: string;
 };
 
 export type BlogIdProps = {
