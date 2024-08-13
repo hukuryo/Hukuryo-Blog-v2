@@ -6,6 +6,8 @@ import { Layout } from '@/app/components/Layout';
 import { PageTracking } from '@/app/components/PageTracking';
 
 import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
+import { Suspense } from 'react';
+import { Spinner } from '@/app/components/ui/spinner';
 
 export const metadata: Metadata = {
   title: '技術記事一覧',
@@ -19,7 +21,9 @@ export default function Page() {
       <Layout>
         <PageTitle title={'技術記事'} />
         <div className="md:flex justify-between">
-          <ArticleList pass={'tech'} />
+          <Suspense fallback={<Spinner />}>
+            <ArticleList pass={'tech'} />
+          </Suspense>
           <SideBar />
         </div>
         <ResponsiveProfile />

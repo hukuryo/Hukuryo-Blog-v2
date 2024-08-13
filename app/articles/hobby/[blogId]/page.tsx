@@ -5,6 +5,8 @@ import { ArticlePageLayout } from '@/app/components/ArticlePageLayout';
 import { DetailBody } from '../../../components/articleDetail/DetailBody';
 import { blogDetailData } from '@/app/lib/microcms';
 import { Metadata } from 'next';
+import { Suspense } from 'react';
+import { Spinner } from '@/app/components/ui/spinner';
 
 export const generateMetadata = async ({
   params,
@@ -33,7 +35,9 @@ export default async function Page({ params }: { params: { blogId: string } }) {
       />
       <ArticlePageLayout>
         <SideBar />
-        <DetailBody blog={blogData} />
+        <Suspense fallback={<Spinner />}>
+          <DetailBody blog={blogData} />
+        </Suspense>
       </ArticlePageLayout>
     </>
   );

@@ -5,6 +5,8 @@ import { PageTracking } from '@/app/components/PageTracking';
 import { SideBar } from '@/app/components/SideBar';
 import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
 import { Metadata } from 'next';
+import { Suspense } from 'react';
+import { Spinner } from '@/app/components/ui/spinner';
 
 export const metadata: Metadata = {
   title: '読んだ本',
@@ -18,7 +20,9 @@ export default async function Page() {
       <Layout>
         <PageTitle title={'読んだ本'} />
         <div className="md:flex justify-between">
-          <ArticleList pass={'books'} />
+          <Suspense fallback={<Spinner />}>
+            <ArticleList pass={'books'} />
+          </Suspense>
           <SideBar />
         </div>
         <ResponsiveProfile />
