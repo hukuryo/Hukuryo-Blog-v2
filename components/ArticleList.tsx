@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaClock } from 'react-icons/fa';
-import { client } from '../lib/client';
+import { client } from '@/app/lib/client';
 
-import { ArticleContent } from '../types/article';
+import { ArticleContent } from '@/app/types/article';
 
 async function fetchArticles(pass: string): Promise<ArticleContent[]> {
   const response = await client.get({

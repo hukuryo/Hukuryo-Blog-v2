@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { SideBar } from '../components/SideBar';
-import { PageTitle } from '../components/PageTitle';
-import { PageTracking } from '@/app/components/PageTracking';
-import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
+import { SideBar } from '@/components/SideBar';
+import { PageTitle } from '@/components/PageTitle';
+import { PageTracking } from '@/components/PageTracking';
+import { ResponsiveProfile } from '@/components/ResponsiveProfile';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

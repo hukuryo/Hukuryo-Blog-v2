@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Footer } from './components/Footer';
-import { ScrollUp } from './components/ui/ScrollUp';
-import { Header } from './components/Header';
-import { ThemeProvider } from './components/ui/theme-provider';
+import { Footer } from '@/components/Footer';
+import { ScrollUp } from '@/components/ui/ScrollUp';
+import { Header } from '@/components/Header';
+import { ThemeProvider } from '@/components/ui/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Hukuryo-no-Blog',

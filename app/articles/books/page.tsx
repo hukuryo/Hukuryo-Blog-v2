@@ -1,12 +1,12 @@
-import { PageTitle } from '../../components/PageTitle';
-import ArticleList from '../../components/ArticleList';
-import { Layout } from '@/app/components/Layout';
-import { PageTracking } from '@/app/components/PageTracking';
-import { SideBar } from '@/app/components/SideBar';
-import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
+import { PageTitle } from '@/components/PageTitle';
+import ArticleList from '@/components/ArticleList';
+import { Layout } from '@/components/Layout';
+import { PageTracking } from '@/components/PageTracking';
+import { SideBar } from '@/components/SideBar';
+import { ResponsiveProfile } from '@/components/ResponsiveProfile';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
-import { Spinner } from '@/app/components/ui/spinner';
+import { Spinner } from '@/components/ui/spinner';
 
 export const metadata: Metadata = {
   title: '読んだ本',

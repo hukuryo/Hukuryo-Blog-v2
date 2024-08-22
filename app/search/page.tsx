@@ -1,9 +1,9 @@
-import { PageTitle } from '../components/PageTitle';
-import SearchArticleList from '../components/SearchArticleList';
-import { PageTracking } from '@/app/components/PageTracking';
-import { Layout } from '@/app/components/Layout';
-import { SideBar } from '@/app/components/SideBar';
-import { ResponsiveProfile } from '@/app/components/ResponsiveProfile';
+import { PageTitle } from '@/components/PageTitle';
+import SearchArticleList from '@/components/SearchArticleList';
+import { PageTracking } from '@/components/PageTracking';
+import { Layout } from '@/components/Layout';
+import { SideBar } from '@/components/SideBar';
+import { ResponsiveProfile } from '@/components/ResponsiveProfile';
 import { Metadata } from 'next';
 
 interface SearchPageProps {

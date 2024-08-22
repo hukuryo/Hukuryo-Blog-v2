@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaHome, FaFolder, FaAngleRight } from 'react-icons/fa';
-import { Tracking } from '../types/pageTracking';
+import { Tracking } from '@/app/types/pageTracking';
 
 const ICON_CLASS = 'inline mb-1';
 const LINK_CLASS = 'text-sm hover:underline';
