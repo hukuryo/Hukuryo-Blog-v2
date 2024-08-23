@@ -1,6 +1,6 @@
 import { SideBar } from '@/components/SideBar';
 import { PageTracking } from '@/components/PageTracking';
-import { ArticleContent } from '@/app/types/article';
+import { ArticleContent } from '@/types/article';
 import { ArticlePageLayout } from '@/components/ArticlePageLayout';
 import { DetailBody } from '@/components/articleDetail/DetailBody';
 import { blogDetailData } from '@/app/lib/microcms';

@@ -1,5 +1,5 @@
 import { client } from '@/app/lib/client';
-import { ArticleContent } from '@/app/types/article';
+import { ArticleContent } from '@/types/article';
 import { NextResponse } from 'next/server';
 
 export async function GET() {

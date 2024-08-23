@@ -2,7 +2,7 @@ import React from 'react';
 import { DetailImage } from './DetailImage';
 import { DetailCategory } from './DetailCategory';
 import { DetailTitle } from './DetailTitle';
-import { BlogIdProps } from '@/app/types/article';
+import { BlogIdProps } from '@/types/article';
 import { useArrangeDate } from '@/app/hooks/useArrangeDay';
 
 export function DetailBody(props: BlogIdProps) {

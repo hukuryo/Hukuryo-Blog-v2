@@ -1,4 +1,4 @@
-import { ArticleContent } from '../types/article';
+import { ArticleContent } from '../../types/article';
 import { client } from './client';
 
 export const blogDetailData = async (blogId: string) => {

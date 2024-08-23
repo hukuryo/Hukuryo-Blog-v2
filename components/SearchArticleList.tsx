@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaClock } from 'react-icons/fa';
 
-import { ArticleContent } from '@/app/types/article';
+import { ArticleContent } from '@/types/article';
 import { client } from '@/app/lib/client';
 
 const DATE_FORMAT_OPTIONS: Intl.DateTimeFormatOptions = {

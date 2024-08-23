@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { FaClock } from 'react-icons/fa';
 import { client } from '@/app/lib/client';
 
-import { ArticleContent } from '@/app/types/article';
+import { ArticleContent } from '@/types/article';
 
 async function fetchArticles(pass: string): Promise<ArticleContent[]> {
   const response = await client.get({
