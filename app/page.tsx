@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Metadata } from 'next';
 import { PageTitle } from '@/components/PageTitle';
 import { SideBar } from '@/components/SideBar';
@@ -15,7 +15,7 @@ interface TechStackProps {
   technologies: string[];
 }
 
-const TechStack: React.FC<TechStackProps> = ({ technologies }) => (
+const TechStack: FC<TechStackProps> = ({ technologies }) => (
   <div className="mt-10">
     <div className="border max-w-md border-slate-300 rounded-md shadow-md sm:w-4/5 px-5 pt-8 pb-6 mb-10 text-gray-800 dark:text-white">
       <p className="text-2xl font-semibold mb-7">技術スタック</p>
@@ -32,7 +32,7 @@ const TechStack: React.FC<TechStackProps> = ({ technologies }) => (
 
 const technologies = ['Next.js', 'TypeScript', 'Tailwind CSS', 'MicroCMS'];
 
-const HomePageContent: React.FC = () => (
+const HomePageContent: FC = () => (
   <div className="w-full px-10 py-5 pb-10 mb-10 shadow-lg rounded-md bg-white dark:bg-slate-900">
     <PageTitle title="トップページ" />
     <p className="mt-16">Hukuryo-no-Blogへようこそ！</p>

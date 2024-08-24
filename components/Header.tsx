@@ -6,6 +6,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Button } from './ui/button';
 import { ModeToggle } from '../components/ui/toggle';
 import { HamburgerMenu } from './HamburgerMenu';
+import { FC } from 'react';
 
 interface NavLink {
   href: string;
@@ -29,13 +30,13 @@ const SOCIAL_LINKS: SocialLink[] = [
   { href: 'https://github.com/hukuryo', icon: FaGithub },
 ];
 
-const Logo: React.FC = () => (
+const Logo: FC = () => (
   <Link href="/" className="font-bold text-2xl hover:opacity-70">
     Hukuryo-no-Blog
   </Link>
 );
 
-const NavLinks: React.FC = () => (
+const NavLinks: FC = () => (
   <div className="ml-5">
     {NAV_LINKS.map(({ href, icon: Icon, text }) => (
       <Link
@@ -50,7 +51,7 @@ const NavLinks: React.FC = () => (
   </div>
 );
 
-const SocialButtons: React.FC = () => (
+const SocialButtons: FC = () => (
   <>
     {SOCIAL_LINKS.map(({ href, icon: Icon }) => (
       <Link key={href} href={href} target="_blank" rel="noopener noreferrer">

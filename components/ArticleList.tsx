@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaClock } from 'react-icons/fa';
@@ -20,7 +20,7 @@ interface ArticleCardProps {
   pass: string;
 }
 
-const ArticleCard: React.FC<ArticleCardProps> = ({ article, pass }) => (
+const ArticleCard: FC<ArticleCardProps> = ({ article, pass }) => (
   <Link href={`/articles/${pass}/${article.id}`} legacyBehavior>
     <a className="border-black">
       <article className="shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:opacity-80 bg-white dark:bg-slate-800">
@@ -58,7 +58,7 @@ interface ArticleListProps {
   pass: string;
 }
 
-const ArticleList: React.FC<ArticleListProps> = async ({ pass }) => {
+const ArticleList: FC<ArticleListProps> = async ({ pass }) => {
   try {
     const articles = await fetchArticles(pass);
 
