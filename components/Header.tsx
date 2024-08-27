@@ -63,7 +63,7 @@ const SocialButtons: FC = () => (
   </>
 );
 
-export function Header() {
+export const Header = () => {
   return (
     <header>
       <div className="shadow-lg lg:flex lg:justify-center lg:items-center h-20 border border-gray-200 dark:border-gray-600 dark:bg-gray-700">
@@ -90,4 +90,4 @@ export function Header() {
       </div>
     </header>
   );
-}
+};

@@ -41,7 +41,7 @@ const MenuLink: FC<MenuItem> = ({ href, icon: Icon, text }) => (
   </Link>
 );
 
-export function HamburgerMenu() {
+export const HamburgerMenu = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -63,4 +63,4 @@ export function HamburgerMenu() {
       </SheetContent>
     </Sheet>
   );
-}
+};

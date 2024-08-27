@@ -4,7 +4,7 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-export function Layout({ children }: LayoutProps) {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <main className="sm:px-5 pb-48">
@@ -14,4 +14,4 @@ export function Layout({ children }: LayoutProps) {
       </main>
     </>
   );
-}
+};

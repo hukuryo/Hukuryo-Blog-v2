@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 
-export function SearchInputForm() {
+export const SearchInputForm = () => {
   const [inputValue, setInputText] = useState('');
 
   const inputText = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,4 +29,4 @@ export function SearchInputForm() {
       </form>
     </>
   );
-}
+};

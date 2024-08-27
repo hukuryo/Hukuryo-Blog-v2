@@ -8,12 +8,12 @@ const LINK_CLASS = 'text-sm hover:underline';
 const CONTAINER_CLASS = 'py-3 pl-3 bg-gray-200 dark:bg-slate-900';
 const MARGIN_RIGHT_CLASS = 'mr-3';
 
-export function PageTracking({
+export const PageTracking = ({
   pass,
   pageTitle,
   articleTitle,
   articlePass,
-}: Tracking) {
+}: Tracking) => {
   return (
     <div className={CONTAINER_CLASS}>
       <Link href="/" className={`${LINK_CLASS} ${MARGIN_RIGHT_CLASS}`}>
@@ -36,4 +36,4 @@ export function PageTracking({
       )}
     </div>
   );
-}
+};

@@ -5,7 +5,7 @@ import { DetailTitle } from './DetailTitle';
 import { BlogIdProps } from '@/types/article';
 import { useArrangeDate } from '@/app/hooks/useArrangeDay';
 
-export function DetailBody(props: BlogIdProps) {
+export const DetailBody = (props: BlogIdProps) => {
   const { blog } = props;
 
   const createdDate = useArrangeDate(blog.publishedAt);
@@ -21,4 +21,4 @@ export function DetailBody(props: BlogIdProps) {
       />
     </div>
   );
-}
+};

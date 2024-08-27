@@ -58,7 +58,7 @@ interface ArticleListProps {
   pass: string;
 }
 
-const ArticleList: FC<ArticleListProps> = async ({ pass }) => {
+export const ArticleList: FC<ArticleListProps> = async ({ pass }) => {
   try {
     const articles = await fetchArticles(pass);
 
@@ -76,5 +76,3 @@ const ArticleList: FC<ArticleListProps> = async ({ pass }) => {
     return <p>記事の読み込み中にエラーが発生しました。</p>;
   }
 };
-
-export default ArticleList;

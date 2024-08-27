@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { PageTitle } from '@/components/PageTitle';
-import ArticleList from '@/components/ArticleList';
+import { ArticleList } from '@/components/ArticleList';
 import { SideBar } from '@/components/SideBar';
 import { Layout } from '@/components/Layout';
 import { PageTracking } from '@/components/PageTracking';

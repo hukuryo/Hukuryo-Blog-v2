@@ -58,7 +58,7 @@ const LinksSection = ({ title, links }: LinksSectionProps) => (
   </div>
 );
 
-export function Footer() {
+export const Footer = () => {
   return (
     <footer className="py-7 shadow-lg">
       <div className="w-full px-10 sm:px-32 mx-auto max-w-8xl">
@@ -74,4 +74,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};

@@ -2,7 +2,7 @@ type title = {
   title: string;
 };
 
-export function PageTitle(props: title) {
+export const PageTitle = (props: title) => {
   const { title } = props;
 
   return (
@@ -12,4 +12,4 @@ export function PageTitle(props: title) {
       </h1>
     </>
   );
-}
+};

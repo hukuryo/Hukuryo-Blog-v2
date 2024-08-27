@@ -5,7 +5,7 @@ type imageUrl = {
   imageUrl: string;
 };
 
-export function DetailImage(props: imageUrl) {
+export const DetailImage = (props: imageUrl) => {
   const { imageUrl } = props;
   return (
     <div className="bg-secondary-100/50 dark:bg-slate-700">
@@ -20,4 +20,4 @@ export function DetailImage(props: imageUrl) {
       </div>
     </div>
   );
-}
+};

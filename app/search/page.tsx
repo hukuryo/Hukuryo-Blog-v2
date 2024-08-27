@@ -1,5 +1,5 @@
 import { PageTitle } from '@/components/PageTitle';
-import SearchArticleList from '@/components/SearchArticleList';
+import { SearchArticleList } from '@/components/SearchArticleList';
 import { PageTracking } from '@/components/PageTracking';
 import { Layout } from '@/components/Layout';
 import { SideBar } from '@/components/SideBar';

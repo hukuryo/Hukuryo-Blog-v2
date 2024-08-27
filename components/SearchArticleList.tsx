@@ -67,7 +67,9 @@ interface SearchArticleProps {
   searchQuery?: string;
 }
 
-const SearchArticleList: FC<SearchArticleProps> = async ({ searchQuery }) => {
+export const SearchArticleList: FC<SearchArticleProps> = async ({
+  searchQuery,
+}) => {
   try {
     const articles = await fetchArticles(searchQuery);
 
@@ -95,5 +97,3 @@ const SearchArticleList: FC<SearchArticleProps> = async ({ searchQuery }) => {
     return <div>記事の読み込み中にエラーが発生しました。</div>;
   }
 };
-
-export default SearchArticleList;

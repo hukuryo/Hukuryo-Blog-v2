@@ -22,7 +22,7 @@ const ProfileButton = () => (
   </Link>
 );
 
-export function Profile() {
+export const Profile = () => {
   return (
     <div className="text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full bg-white dark:bg-slate-800">
       <ProfileImage />
@@ -37,4 +37,4 @@ export function Profile() {
       </div>
     </div>
   );
-}
+};

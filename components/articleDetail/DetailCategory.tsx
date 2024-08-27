@@ -6,7 +6,7 @@ type CategoryArea = {
   createdDate: string;
 };
 
-export function DetailCategory(props: CategoryArea) {
+export const DetailCategory = (props: CategoryArea) => {
   const { category, createdDate } = props;
   return (
     <div className="mb-12">
@@ -19,4 +19,4 @@ export function DetailCategory(props: CategoryArea) {
       </small>
     </div>
   );
-}
+};

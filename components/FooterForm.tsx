@@ -1,4 +1,4 @@
-export function FooterForm() {
+export const FooterForm = () => {
   return (
     <div className="mt-32 w-full">
       <p className="font-bold mb-7 border-b-8">お問い合わせはこちらから</p>
@@ -48,4 +48,4 @@ export function FooterForm() {
       </div>
     </div>
   );
-}
+};
