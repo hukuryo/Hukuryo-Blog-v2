@@ -7,17 +7,13 @@ import { FaMagnifyingGlass } from 'react-icons/fa6';
 export const SearchInputForm = () => {
   const [inputValue, setInputText] = useState('');
 
-  const inputText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputText(e.target.value);
-  };
-
   return (
     <>
       <form className="flex items-center mb-10">
         <input
           type="text"
           value={inputValue}
-          onChange={inputText}
+          onChange={(e) => setInputText(e.target.value)}
           className="rounded-md p-2 border-secondary-300 border focus:ring-opacity-50"
           placeholder="記事を検索"
         />
