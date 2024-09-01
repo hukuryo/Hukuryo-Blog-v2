@@ -9,17 +9,20 @@ export const SearchInputForm = () => {
 
   return (
     <>
-      <form className="flex items-center mb-10">
+      <form className="flex items-center mb-10 bg-white shadow-lg rounded-full overflow-hidden">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputText(e.target.value)}
-          className="rounded-md p-2 border-secondary-300 border focus:ring-opacity-50"
+          className="flex-grow px-4 py-2 text-gray-700 border-none focus:outline-none focus:ring-2 focus:ring-primary-500"
           placeholder="記事を検索"
         />
         <Link href={`/search?s=${inputValue}`}>
-          <button className="bg-blue-500 px-4 py-3 hover:opacity-80 bg-primary-500 hover:bg-primary-600 text-white rounded-md">
-            <FaMagnifyingGlass />
+          <button
+            className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300"
+            aria-label="Search"
+          >
+            <FaMagnifyingGlass className="w-5 h-5" />
           </button>
         </Link>
       </form>
