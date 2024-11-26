@@ -9,7 +9,7 @@ export const SearchInputForm = () => {
 
   return (
     <>
-      <form className="flex items-center mb-10 bg-white shadow-lg rounded-full overflow-hidden">
+      <form className="flex items-center mb-10 bg-white shadow-lg">
         <input
           type="text"
           value={inputValue}
