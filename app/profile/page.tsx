@@ -4,6 +4,7 @@ import { PageTitle } from '@/components/PageTitle';
 import { PageTracking } from '@/components/PageTracking';
 import { ResponsiveProfile } from '@/components/ResponsiveProfile';
 import { Metadata } from 'next';
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: 'プロフィール',
@@ -14,7 +15,7 @@ const SectionTitle = ({ title }: { title: string }) => (
   <p className="text-center mb-7 font-bold">{title}</p>
 );
 
-const InfoLine = ({ children }: { children: React.ReactNode }) => (
+const InfoLine = ({ children }: { children: ReactNode }) => (
   <p className="mb-7 border-b-4 border-gray-400">{children}</p>
 );
 
@@ -23,7 +24,7 @@ const ProfileLink = ({
   children,
 }: {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) => (
   <li className="mb-3">
     ・{' '}

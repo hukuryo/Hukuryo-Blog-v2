@@ -1,11 +1,11 @@
 import React from 'react';
 import { FaClipboard } from 'react-icons/fa';
 
-type DetailTitle = {
+type DetailTitleProps = {
   title: string;
 };
 
-export const DetailTitle = (props: DetailTitle) => {
+export const DetailTitle = (props: DetailTitleProps) => {
   const { title } = props;
   return (
     <h1 className="text-3xl font-bold pb-6">

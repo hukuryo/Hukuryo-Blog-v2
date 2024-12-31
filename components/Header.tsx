@@ -6,17 +6,17 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Button } from './ui/button';
 import { ModeToggle } from '../components/ui/toggle';
 import { HamburgerMenu } from './HamburgerMenu';
-import { FC } from 'react';
+import { ElementType, FC } from 'react';
 
 interface NavLink {
   href: string;
-  icon: React.ElementType;
+  icon: ElementType;
   text: string;
 }
 
 interface SocialLink {
   href: string;
-  icon: React.ElementType;
+  icon: ElementType;
 }
 
 const NAV_LINKS: NavLink[] = [

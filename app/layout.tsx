@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { ScrollUp } from '@/components/ui/ScrollUp';
 import { Header } from '@/components/Header';
 import { ThemeProvider } from '@/components/ui/theme-provider';
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: 'Hukuryo-no-Blog',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="ja">

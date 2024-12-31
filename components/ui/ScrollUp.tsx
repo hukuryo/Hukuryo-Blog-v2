@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FaChevronUp } from "react-icons/fa";
+import { FaChevronUp } from 'react-icons/fa';
 
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -37,7 +37,7 @@ export function ScrollUp() {
         }`}
         onClick={scrollToTop}
       >
-        <FaChevronUp/>
+        <FaChevronUp />
       </button>
     </div>
   );
