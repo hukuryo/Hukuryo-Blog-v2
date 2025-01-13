@@ -31,7 +31,7 @@ const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 const Logo: FC = () => (
-  <Link href="/" className="font-bold text-2xl hover:opacity-70">
+  <Link href="/" className="font-bold md:text-2xl hover:opacity-70 text-sm">
     Hukuryo-no-Blog
   </Link>
 );
