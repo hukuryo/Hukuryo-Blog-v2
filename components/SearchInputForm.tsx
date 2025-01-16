@@ -14,7 +14,7 @@ export const SearchInputForm = () => {
           type="text"
           value={inputValue}
           onChange={(e) => setInputText(e.target.value)}
-          className="flex-grow px-4 py-2 text-gray-700 border-none focus:outline-none focus:ring-2 focus:ring-primary-500"
+          className="flex-grow px-4 py-3 text-gray-700 border-none focus:outline-none focus:ring-2 focus:ring-primary-500"
           placeholder="記事を検索"
         />
         <Link href={`/search?s=${inputValue}`}>
