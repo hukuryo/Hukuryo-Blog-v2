@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import '../css/globals.css';
+import '../../css/globals.css';
 import { ReactNode } from 'react';
 import { ThemeProvider } from '@/src/components/ui/ThemeProvider';
 import { Header } from '@/src/components/Header';
