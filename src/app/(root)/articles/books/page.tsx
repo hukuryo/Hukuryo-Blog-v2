@@ -6,7 +6,7 @@ import { SideBar } from '@/src/components/SideBar';
 import { ResponsiveProfile } from '@/src/components/ResponsiveProfile';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
-import { Spinner } from '@/src/components/ui/spinner';
+import { Spinner } from '@/src/components/ui/Spinner';
 
 export const metadata: Metadata = {
   title: '読んだ本',

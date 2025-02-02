@@ -7,7 +7,7 @@ import { PageTracking } from '@/src/components/PageTracking';
 
 import { ResponsiveProfile } from '@/src/components/ResponsiveProfile';
 import { Suspense } from 'react';
-import { Spinner } from '@/src/components/ui/spinner';
+import { Spinner } from '@/src/components/ui/Spinner';
 
 export const metadata: Metadata = {
   title: '技術記事一覧',
