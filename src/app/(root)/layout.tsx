@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '../css/globals.css';
 import { ReactNode } from 'react';
-import { ThemeProvider } from '@/src/components/ui/theme-provider';
+import { ThemeProvider } from '@/src/components/ui/ThemeProvider';
 import { Header } from '@/src/components/Header';
 import { ScrollUp } from '@/src/components/ui/ScrollUp';
 import { Footer } from '@/src/components/Footer';

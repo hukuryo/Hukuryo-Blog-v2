@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { FaBook, FaLaptopCode, FaGamepad, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { Button } from './ui/button';
-import { ModeToggle } from '../components/ui/toggle';
+import { Button } from './ui/Button';
+import { ModeToggle } from '../components/ui/Toggle';
 import { HamburgerMenu } from './HamburgerMenu';
 import { ElementType, FC } from 'react';
 
