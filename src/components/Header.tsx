@@ -3,10 +3,10 @@
 import Link from 'next/link';
 import { FaBook, FaLaptopCode, FaGamepad, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { Button } from '@/src/components/ui/Button';
-import { ModeToggle } from '@/src/components/ui/Toggle';
 import { HamburgerMenu } from './HamburgerMenu';
 import { ElementType, FC } from 'react';
+import { Button } from './ui/Button';
+import { ModeToggle } from './ui/Toggle';
 
 interface NavLink {
   href: string;

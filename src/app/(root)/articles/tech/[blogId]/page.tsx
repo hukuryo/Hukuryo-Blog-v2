@@ -4,10 +4,10 @@ import { ArticleContent } from '../../../../../types/article';
 import { ArticlePageLayout } from '@/src/components/ArticlePageLayout';
 import { DetailBody } from '@/src/components/articleDetail/DetailBody';
 import { blogDetailData } from '@/src/lib/microcms';
-import { Spinner } from '@/src/components/ui/Spinner';
 
 import { Metadata } from 'next';
 import { Suspense } from 'react';
+import { Spinner } from '@/src/components/ui/Spinner';
 
 export const generateMetadata = async ({
   params,

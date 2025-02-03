@@ -1,12 +1,5 @@
-import { Button } from '@/src/components/ui/Button';
 import Link from 'next/link';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/src/components/ui/Sheet';
+
 import { IoIosMenu } from 'react-icons/io';
 import {
   FaBook,
@@ -16,6 +9,14 @@ import {
   FaUser,
 } from 'react-icons/fa';
 import { ElementType, FC } from 'react';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from './ui/Sheet';
+import { Button } from './ui/Button';
 
 interface MenuItem {
   href: string;
