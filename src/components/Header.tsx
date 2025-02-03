@@ -5,8 +5,9 @@ import { FaBook, FaLaptopCode, FaGamepad, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { HamburgerMenu } from './HamburgerMenu';
 import { ElementType, FC } from 'react';
-import { Button } from './ui/Button';
+
 import { ModeToggle } from './ui/Toggle';
+import { Button } from './ui/button';
 
 interface NavLink {
   href: string;

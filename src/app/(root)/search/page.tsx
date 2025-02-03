@@ -1,9 +1,9 @@
-import { PageTitle } from '@/src/components/PageTitle';
-import { SearchArticleList } from '@/src/components/SearchArticleList';
-import { PageTracking } from '@/src/components/PageTracking';
-import { Layout } from '@/src/components/Layout';
-import { SideBar } from '@/src/components/SideBar';
-import { ResponsiveProfile } from '@/src/components/ResponsiveProfile';
+import { PageTitle } from '../../../components/PageTitle';
+import { SearchArticleList } from '../../../components/SearchArticleList';
+import { PageTracking } from '../../../components/PageTracking';
+import { Layout } from '../../../components/Layout';
+import { SideBar } from '../../../components/SideBar';
+import { ResponsiveProfile } from '../../../components/ResponsiveProfile';
 import { Metadata } from 'next';
 
 interface SearchPageProps {

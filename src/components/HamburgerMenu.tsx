@@ -15,8 +15,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from './ui/Sheet';
-import { Button } from './ui/Button';
+} from '../components/ui/sheet';
+import { Button } from '../components/ui/button';
 
 interface MenuItem {
   href: string;

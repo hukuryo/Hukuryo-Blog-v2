@@ -1,12 +1,12 @@
-import { SideBar } from '@/src/components/SideBar';
-import { PageTracking } from '@/src/components/PageTracking';
-import { ArticleContent } from '@/src/types/article';
-import { ArticlePageLayout } from '@/src/components/ArticlePageLayout';
-import { DetailBody } from '@/src/components/articleDetail/DetailBody';
-import { blogDetailData } from '@/src/lib/microcms';
+import { SideBar } from '../../../../../components/SideBar';
+import { PageTracking } from '../../../../../components/PageTracking';
+import { ArticleContent } from '../../../../../types/article';
+import { ArticlePageLayout } from '../../../../../components/ArticlePageLayout';
+import { DetailBody } from '../../../../../components/articleDetail/DetailBody';
+import { blogDetailData } from '../../../../../lib/microcms';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
-import { Spinner } from '@/src/components/ui/Spinner';
+import { Spinner } from '../../../../../components/ui/Spinner';
 
 export const generateMetadata = async ({
   params,

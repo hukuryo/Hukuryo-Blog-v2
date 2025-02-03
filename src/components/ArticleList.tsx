@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaClock } from 'react-icons/fa';
 
-import { ArticleContent } from '@/src/types/article';
+import { ArticleContent } from '../types/article';
 import { client } from '../lib/client';
 
 async function fetchArticles(pass: string): Promise<ArticleContent[]> {

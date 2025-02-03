@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
-import { PageTitle } from '@/src/components/PageTitle';
-import { ArticleList } from '@/src/components/ArticleList';
-import { SideBar } from '@/src/components/SideBar';
-import { Layout } from '@/src/components/Layout';
-import { PageTracking } from '@/src/components/PageTracking';
+import { PageTitle } from '../../../../components/PageTitle';
+import { ArticleList } from '../../../../components/ArticleList';
+import { SideBar } from '../../../../components/SideBar';
+import { Layout } from '../../../../components/Layout';
+import { PageTracking } from '../../../../components/PageTracking';
 
-import { ResponsiveProfile } from '@/src/components/ResponsiveProfile';
+import { ResponsiveProfile } from '../../../../components/ResponsiveProfile';
 import { Suspense } from 'react';
-import { Spinner } from '@/src/components/ui/Spinner';
+import { Spinner } from '../../../../components/ui/Spinner';
 
 export const metadata: Metadata = {
   title: '技術記事一覧',

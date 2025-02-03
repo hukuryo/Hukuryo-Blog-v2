@@ -1,4 +1,4 @@
-import { Spinner } from '@/src/components/ui/Spinner';
+import { Spinner } from '../../components/ui/Spinner';
 import React from 'react';
 
 const Loading = () => {

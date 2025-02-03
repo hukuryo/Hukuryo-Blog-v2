@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { SideBar } from '@/src/components/SideBar';
-import { PageTitle } from '@/src/components/PageTitle';
-import { PageTracking } from '@/src/components/PageTracking';
-import { ResponsiveProfile } from '@/src/components/ResponsiveProfile';
+import { SideBar } from '../../../components/SideBar';
+import { PageTitle } from '../../../components/PageTitle';
+import { PageTracking } from '../../../components/PageTracking';
+import { ResponsiveProfile } from '../../../components/ResponsiveProfile';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 

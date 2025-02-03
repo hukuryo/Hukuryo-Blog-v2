@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { Metadata } from 'next';
-import { PageTitle } from '@/src/components/PageTitle';
-import { SideBar } from '@/src/components/SideBar';
-import { ResponsiveProfile } from '@/src/components/ResponsiveProfile';
+
+import { SideBar } from '../../components/SideBar';
+import { ResponsiveProfile } from '../../components/ResponsiveProfile';
+import { PageTitle } from '../../components/PageTitle';
 
 export const metadata: Metadata = {
   title: 'トップページ',

@@ -1,12 +1,12 @@
-import { PageTitle } from '@/src/components/PageTitle';
-import { ArticleList } from '@/src/components/ArticleList';
-import { PageTracking } from '@/src/components/PageTracking';
-import { Layout } from '@/src/components/Layout';
-import { SideBar } from '@/src/components/SideBar';
-import { ResponsiveProfile } from '@/src/components/ResponsiveProfile';
+import { PageTitle } from '../../../../components/PageTitle';
+import { ArticleList } from '../../../../components/ArticleList';
+import { PageTracking } from '../../../../components/PageTracking';
+import { Layout } from '../../../../components/Layout';
+import { SideBar } from '../../../../components/SideBar';
+import { ResponsiveProfile } from '../../../../components/ResponsiveProfile';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
-import { Spinner } from '@/src/components/ui/Spinner';
+import { Spinner } from '../../../../components/ui/Spinner';
 
 export const metadata: Metadata = {
   title: '趣味の記事一覧',

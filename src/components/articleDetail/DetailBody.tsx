@@ -2,8 +2,8 @@ import React from 'react';
 import { DetailImage } from './DetailImage';
 import { DetailCategory } from './DetailCategory';
 import { DetailTitle } from './DetailTitle';
-import { BlogIdProps } from '@/src/types/article';
-import { useArrangeDate } from '@/src/hooks/useArrangeDay';
+import { BlogIdProps } from '../../types/article';
+import { useArrangeDate } from '../../hooks/useArrangeDay';
 
 export const DetailBody = (props: BlogIdProps) => {
   const { blog } = props;
