@@ -1,4 +1,4 @@
-import { Button } from './ui/Button';
+import { Button } from '@/src/components/ui/Button';
 import Link from 'next/link';
 import {
   Sheet,
@@ -6,7 +6,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from './ui/Sheet';
+} from '@/src/components/ui/Sheet';
 import { IoIosMenu } from 'react-icons/io';
 import {
   FaBook,
