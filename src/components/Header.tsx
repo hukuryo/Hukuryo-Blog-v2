@@ -7,7 +7,7 @@ import { HamburgerMenu } from './HamburgerMenu';
 import { ElementType, FC } from 'react';
 
 import { ModeToggle } from './ui/Toggle';
-import { Button } from './ui/button';
+import { Button } from './ui/Button';
 
 interface NavLink {
   href: string;
