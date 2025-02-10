@@ -22,8 +22,8 @@ export const generateMetadata = async ({
   };
 };
 
-export default async function Page({ params }: { params: { blogId: string } }) {
-  const blogData: ArticleContent = await blogDetailData(params.blogId);
+export default async function Page({ params }: { params: { id: string } }) {
+  const blogData: ArticleContent = await blogDetailData(params.id);
 
   return (
     <>
