@@ -22,7 +22,6 @@ export const generateMetadata = async ({
 };
 
 export default async function Page({ params }: { params: { id: string } }) {
-  console.log('params : ' + JSON.stringify(params));
   const blogData: ArticleContent = await blogDetailData(params.id);
 
   return (
