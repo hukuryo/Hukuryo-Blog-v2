@@ -18,11 +18,11 @@ import {
 } from '../components/ui/Sheet';
 import { Button } from '../components/ui/Button';
 
-interface MenuItem {
+type MenuItem = {
   href: string;
   icon: ElementType;
   text: string;
-}
+};
 
 const MENU_ITEMS: MenuItem[] = [
   { href: '/', icon: FaHome, text: 'トップページ' },

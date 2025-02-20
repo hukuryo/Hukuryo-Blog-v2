@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 const MAIN_STYLES = 'pt-10 sm:px-20 pb-4 px-5';
 
-interface TechStackProps {
+type TechStackProps = {
   technologies: string[];
-}
+};
 
 const TechStack: FC<TechStackProps> = ({ technologies }) => (
   <div className="mt-10">

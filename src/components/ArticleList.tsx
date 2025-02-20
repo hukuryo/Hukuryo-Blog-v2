@@ -15,10 +15,10 @@ async function fetchArticles(pass: string): Promise<ArticleContent[]> {
   return response.contents;
 }
 
-interface ArticleCardProps {
+type ArticleCardProps = {
   article: ArticleContent;
   pass: string;
-}
+};
 
 const ArticleCard: FC<ArticleCardProps> = ({ article, pass }) => (
   <Link href={`/articles/${pass}/${article.id}`} legacyBehavior>
@@ -54,11 +54,7 @@ const ArticleCard: FC<ArticleCardProps> = ({ article, pass }) => (
   </Link>
 );
 
-interface ArticleListProps {
-  pass: string;
-}
-
-export const ArticleList: FC<ArticleListProps> = async ({ pass }) => {
+export const ArticleList: FC<{ pass: string }> = async ({ pass }) => {
   try {
     const articles = await fetchArticles(pass);
 

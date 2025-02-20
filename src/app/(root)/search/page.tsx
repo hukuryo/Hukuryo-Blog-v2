@@ -6,9 +6,9 @@ import { SideBar } from '../../../components/SideBar';
 import { ResponsiveProfile } from '../../../components/ResponsiveProfile';
 import { Metadata } from 'next';
 
-interface SearchPageProps {
+type SearchPageProps = {
   searchParams: { [key: string]: string | string[] | undefined };
-}
+};
 
 const getSearchQuery = (
   searchParams: SearchPageProps['searchParams'],

@@ -25,10 +25,10 @@ async function fetchArticles(searchQuery?: string): Promise<ArticleContent[]> {
   }
 }
 
-interface ArticleCardProps {
+type ArticleCardProps = {
   article: ArticleContent;
   pass: string;
-}
+};
 
 const ArticleCard: FC<ArticleCardProps> = ({ article, pass }) => (
   <Link href={`/articles/${pass}/${article.id}`} legacyBehavior>
@@ -63,9 +63,9 @@ const ArticleCard: FC<ArticleCardProps> = ({ article, pass }) => (
   </Link>
 );
 
-interface SearchArticleProps {
+type SearchArticleProps = {
   searchQuery?: string;
-}
+};
 
 export const SearchArticleList: FC<SearchArticleProps> = async ({
   searchQuery,

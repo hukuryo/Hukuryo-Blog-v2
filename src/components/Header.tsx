@@ -5,20 +5,19 @@ import { FaBook, FaLaptopCode, FaGamepad, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { HamburgerMenu } from './HamburgerMenu';
 import { ElementType, FC } from 'react';
-
 import { ModeToggle } from './ui/Toggle';
 import { Button } from './ui/Button';
 
-interface NavLink {
+type NavLink = {
   href: string;
   icon: ElementType;
   text: string;
-}
+};
 
-interface SocialLink {
+type SocialLink = {
   href: string;
   icon: ElementType;
-}
+};
 
 const NAV_LINKS: NavLink[] = [
   { href: '/articles/tech', icon: FaLaptopCode, text: '技術記事' },
