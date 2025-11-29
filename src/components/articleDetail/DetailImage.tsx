@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 
-type imageUrl = {
+type DetailImageProps = {
   imageUrl: string;
 };
 
-export const DetailImage = (props: imageUrl) => {
+export const DetailImage = (props: DetailImageProps) => {
   const { imageUrl } = props;
   return (
     <div className="bg-secondary-100/50 dark:bg-slate-700">
