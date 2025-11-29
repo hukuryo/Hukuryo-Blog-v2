@@ -3,12 +3,12 @@ import { DetailImage } from './DetailImage';
 import { DetailCategory } from './DetailCategory';
 import { DetailTitle } from './DetailTitle';
 import { BlogIdProps } from '../../types/article';
-import { useArrangeDate } from '../../hooks/useArrangeDay';
+import { formatDate } from '../../lib/utils';
 
 export const DetailBody = (props: BlogIdProps) => {
   const { blog } = props;
 
-  const createdDate = useArrangeDate(blog.publishedAt);
+  const createdDate = formatDate(blog.publishedAt);
 
   return (
     <div className="mb-10 p-7 mx-auto w-10/12 lg:w-9/12 shadow-lg rounded-md bg-white dark:bg-slate-800">

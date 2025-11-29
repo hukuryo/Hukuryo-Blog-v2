@@ -1,8 +1,8 @@
-type title = {
+type PageTitleProps = {
   title: string;
 };
 
-export const PageTitle = (props: title) => {
+export const PageTitle = (props: PageTitleProps) => {
   const { title } = props;
 
   return (
