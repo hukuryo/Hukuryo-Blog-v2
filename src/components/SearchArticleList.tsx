@@ -40,7 +40,7 @@ export const SearchArticleList: FC<SearchArticleProps> = async ({
         )}
         <ul className="mt-8 grid grid-cols-1 gap-6 w-full mr-5 md:grid-cols-2">
           {articles.map((article) => (
-            <li key={article.id}>
+            <li key={article.id} className="h-full">
               <ArticleCard article={article} pass={article.kinds} />
             </li>
           ))}
