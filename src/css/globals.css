@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 @layer base {
@@ -103,7 +103,7 @@ html {
     margin: 12px 0;
   }
   pre {
-    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: Menlo, Monaco, 'Courier New', monospace;
     background-color: black;
     color: #fff;
     padding: 10px;
