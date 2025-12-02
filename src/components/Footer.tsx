@@ -59,6 +59,8 @@ const LinksSection = ({ title, links }: LinksSectionProps) => (
 );
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="py-7 shadow-lg">
       <div className="w-full px-10 sm:px-32 mx-auto max-w-8xl">
@@ -69,7 +71,7 @@ export const Footer = () => {
         </div>
         <hr className="mt-10 mb-10" />
         <span className="block text-center text-gray-600 dark:text-gray-400">
-          © 2024 Hukuryo-no-Blog
+          © {currentYear} Hukuryo-no-Blog
         </span>
       </div>
     </footer>
