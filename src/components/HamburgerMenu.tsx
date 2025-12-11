@@ -8,7 +8,7 @@ import {
   FaLaptopCode,
   FaUser,
 } from 'react-icons/fa';
-import { ElementType, FC } from 'react';
+import { ElementType, FC, useState } from 'react';
 import {
   Sheet,
   SheetContent,
@@ -22,6 +22,7 @@ type MenuItem = {
   href: string;
   icon: ElementType;
   text: string;
+  onClick?: () => void;
 };
 
 const MENU_ITEMS: MenuItem[] = [
@@ -32,9 +33,10 @@ const MENU_ITEMS: MenuItem[] = [
   { href: '/profile', icon: FaUser, text: 'プロフィール' },
 ];
 
-const MenuLink: FC<MenuItem> = ({ href, icon: Icon, text }) => (
+const MenuLink: FC<MenuItem> = ({ href, icon: Icon, text, onClick }) => (
   <Link
     href={href}
+    onClick={onClick}
     className="text-gray-700 dark:text-gray-300 py-2 mt-7 hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300 first:mt-4 pl-2"
   >
     <Icon className="mr-2 inline mb-1" />
@@ -43,8 +45,10 @@ const MenuLink: FC<MenuItem> = ({ href, icon: Icon, text }) => (
 );
 
 export const HamburgerMenu = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant="ghost" className="ml-3">
           <IoIosMenu className="h-[1.0rem] w-[1.2rem]" />
@@ -58,7 +62,7 @@ export const HamburgerMenu = () => {
         </SheetHeader>
         <nav className="text-left fixed z-10 sm:w-2/5 w-3/5 h-screen flex flex-col justify-start pt-2 ease-linear duration-300 bg-white dark:bg-gray-800">
           {MENU_ITEMS.map((item) => (
-            <MenuLink key={item.href} {...item} />
+            <MenuLink key={item.href} {...item} onClick={() => setOpen(false)} />
           ))}
         </nav>
       </SheetContent>
