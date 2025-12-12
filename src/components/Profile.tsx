@@ -24,7 +24,7 @@ const ProfileButton = () => (
 
 export const Profile = () => {
   return (
-    <div className="text-center lg:text-left border py-4 px-3 lg:w-60 rounded-lg shadow-md w-full bg-white dark:bg-slate-800">
+    <div className="text-center lg:text-left py-4 px-3 lg:w-60 w-full">
       <ProfileImage />
       <h3 className="text-center mt-4 mb-7">Hukuryo</h3>
       <p className="mb-3 text-xs">

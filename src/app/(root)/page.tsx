@@ -19,7 +19,7 @@ type HomePageContentProps = {
 
 const HomePageContent: FC<HomePageContentProps> = ({ profileContent }) => {
   return (
-    <div className="w-full px-10 py-5 pb-10 mb-10 shadow-lg rounded-md bg-white dark:bg-slate-900">
+    <div className="w-full h-full px-10 py-5 pb-10 mb-10 shadow-lg rounded-md bg-white dark:bg-slate-900">
       <PageTitle title="トップページ" />
       {profileContent && (
         <div
@@ -37,7 +37,7 @@ export default async function Home() {
 
   return (
     <main className={MAIN_STYLES}>
-      <div className="flex flex-row-reverse">
+      <div className="flex flex-row-reverse items-stretch">
         <SideBar />
         <HomePageContent profileContent={profileContent} />
       </div>
