@@ -6,10 +6,12 @@ export const SideBar = () => {
     <>
       <aside
         id="cta-button-sidebar"
-        className="h-full ml-10 hidden mb-5 lg:block"
+        className="ml-10 hidden mb-5 lg:block"
       >
-        <SearchInputForm />
-        <Profile />
+        <div className="h-full flex flex-col shadow-lg rounded-md bg-white dark:bg-slate-900 p-5">
+          <SearchInputForm />
+          <Profile />
+        </div>
       </aside>
     </>
   );
